@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Landing from "../assets/images/login/login-dashboard.png";
-import styles from "../styles/admin/login.module.css";
+import styles from "../styles/admin/Login.module.css";
 const Login = () => {
   return (
     <div>
