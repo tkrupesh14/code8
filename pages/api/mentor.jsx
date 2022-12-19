@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Mentor from "../assets/images/student.jpeg";
-import styles from "../styles/mentor.module.css";
+import Mentor from "../../assets/images/student.jpeg";
+// import Mentor from "../assets/images/student.jpeg";
+import styles from "../../styles/mentor.module.css";
 
 const mentor = () => {
   return (

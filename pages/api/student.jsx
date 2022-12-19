@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Ambassador from "../assets/images/mentor.jpeg";
-import styles from "../styles/student.module.css";
+import Ambassador from "../../assets/images/mentor.jpeg";
+import styles from "../../styles/student.module.css";
 
 const student = () => {
   return (
