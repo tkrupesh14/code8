@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { FaArrowRight } from "react-icons/fa";
-import styles from "../styles/Learn.module.css";
+import styles from "../styles/learn.module.css";
 import Features2 from "../components/Features/Features2";
 import Features from "../components/Features/Features";
 import Stats from "../components/home/Stats";
