@@ -92,16 +92,13 @@ const Newproject = () => {
         {/* <pre>{JSON.stringify(formValues,undefined,2)}</pre> */}
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.Pname}>
-            {/* */}
             <label className="flex flex-row ">
-              Project Name{" "}
-              
-                {" "}
-                <BsExclamationCircle className='mt-1 mx-2'/>
+              Project Name
+              <BsExclamationCircle className="mt-1 mx-2" />
             </label>
             <br />
             <input
-              className='border-black border'
+              className="border-black border"
               type="text"
               name="Pname"
               value={formValues.Pname}
@@ -112,11 +109,11 @@ const Newproject = () => {
 
           <div className={styles.description}>
             <label className="flex flex-row ">
-              Description <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Description <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <textarea
-              className='border border-black'
+              className="border border-black"
               type="text"
               name="Description"
               value={formValues.Description}
@@ -129,11 +126,11 @@ const Newproject = () => {
 
           <div className={styles.tech}>
             <label className="flex flex-row ">
-              Techstack Used <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Techstack Used <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <input
-              className='border border-black'
+              className="border border-black"
               type="text"
               name="tstack"
               value={formValues.tstack}
@@ -143,11 +140,11 @@ const Newproject = () => {
           <p className={styles.paragraph}>{formErrors.tstack}</p>
           <div className={styles.tech}>
             <label className="flex flex-row " htmlFor="fname">
-              Problem Statement <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Problem Statement <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <input
-              className='border border-black'
+              className="border border-black"
               type="text"
               id="fname"
               name="Pstatement"
@@ -188,7 +185,7 @@ const Newproject = () => {
           <p className={styles.paragraph}>{formErrors.Demo}</p>
           <div className={styles.tech}>
             <label className="flex flex-row " htmlFor="fname">
-              Collaborators <BsExclamationCircle className='mt-1 mx-2'/>{" "}
+              Collaborators <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <input
@@ -203,7 +200,7 @@ const Newproject = () => {
           <p className={styles.paragraph}>{formErrors.Collaborators}</p>
           <div className={styles.tech}>
             <label className="flex flex-row " htmlFor="fname">
-              Prequistics <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Prequistics <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <input
@@ -233,7 +230,7 @@ const Newproject = () => {
           <p className={styles.paragraph}>{formErrors.Author}</p>
           <div className={styles.description}>
             <label className="flex flex-row " htmlFor="fname">
-              Resources <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Resources <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <textarea
@@ -248,7 +245,7 @@ const Newproject = () => {
           <p className={styles.paragraph}>{formErrors.Resources}</p>
           <div className={styles.description}>
             <label className="flex flex-row " htmlFor="fname">
-              Prototyping Steps <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Prototyping Steps <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <textarea
@@ -263,7 +260,8 @@ const Newproject = () => {
           <p className={styles.paragraph}>{formErrors.Psteps}</p>
           <div className={styles.description}>
             <label className="flex flex-row " htmlFor="fname">
-              Technical Description <BsExclamationCircle className='mt-1 mx-2' />{" "}
+              Technical Description{" "}
+              <BsExclamationCircle className="mt-1 mx-2" />{" "}
             </label>
             <br />
             <textarea
