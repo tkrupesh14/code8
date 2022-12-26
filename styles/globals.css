@@ -43,6 +43,10 @@ img:hover {
   }
 }
 
+li {
+  list-style-type: disc;
+}
+
 .gradient-bg-welcome {
   background-color: #0f0e13;
   background-image: radial-gradient(
