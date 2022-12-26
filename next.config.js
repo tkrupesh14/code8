@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const removeImports = require("next-remove-imports")();
 
-module.exports = nextConfig
+// const nextConfig = {
+//   reactStrictMode: true,
+//   swcMinify: true,
+// };
+
+module.exports = (phase, { defaultConfig }) => {
+  return removeImports({
+    ...defaultConfig,
+  });
+};
+
+// module.exports = nextConfig;

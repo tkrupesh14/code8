@@ -1,16 +1,48 @@
-import React from 'react'
-import Image from 'next/image'
-import Sidebar from '../../Admin/components/Sidebar'
-import styles from '../../styles/admin/Build.module.css'
-import profile from "../../assets/images/profile.png"
-import { BiSearchAlt } from 'react-icons/bi'
+import React, { useState } from "react";
+import Image from "next/image";
+import Sidebar from "../../Admin/components/Sidebar";
+import styles from "../../styles/admin/Build.module.css";
+import profile from "../../assets/images/profile.png";
+import { BiSearchAlt } from "react-icons/bi";
+
+import "@uiw/react-md-editor/markdown-editor.css";
+import "@uiw/react-markdown-preview/markdown.css";
+import dynamic from "next/dynamic";
+
+const MDEditor = dynamic(
+  () => import("@uiw/react-md-editor").then((mod) => mod.default),
+  { ssr: false }
+);
+const EditerMarkdown = dynamic(
+  () =>
+    import("@uiw/react-md-editor").then((mod) => {
+      return mod.default.Markdown;
+    }),
+  { ssr: false }
+);
+const Markdown = dynamic(
+  () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
+  { ssr: false }
+);
+
 const Build = () => {
+  const [value, setValue] = useState("**Hello world!!!**");
+
   return (
     <div className={styles.wrapper}>
       <div>
         <Sidebar />
       </div>
-      <div className={styles.mainscreen}>
+      <div className="w-full h-screen" data-color-mode="dark">
+        <MDEditor height={"100%"} value={value} onChange={setValue} />
+        <div style={{ paddingTop: 50 }}>
+          <Markdown source={value} />
+        </div>
+        {/* <EditerMarkdown source={value} /> */}
+      </div>
+
+      {/* Previous Code */}
+      {/* <div className={styles.mainscreen}>
         <div className={styles.buildHead}>
           <div className={styles.buildHeadLeft}>
             <div className={styles.buildHeadText}>Weclome Back Jimmy</div>
@@ -45,9 +77,9 @@ const Build = () => {
           <button className={styles.Save}>Save</button>
           <button className={styles.Next}>Next</button>
         </div>
-      </div>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default Build
+export default Build;
