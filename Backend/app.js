@@ -7,12 +7,15 @@ const app = express();
 const cloudinary = require("cloudinary");
 const fileUpload = require("express-fileupload");
 const cors = require("cors");
+const morgan = require("morgan");
 require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(fileUpload());
+
+app.use(morgan("tiny")); // console logging http requests
 
 const port = process.env.PORT || 5500;
 

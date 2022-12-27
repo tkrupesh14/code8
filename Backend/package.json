@@ -29,5 +29,8 @@
     "nodemon": "^2.0.13",
     "passport": "^0.5.3",
     "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
   }
 }
