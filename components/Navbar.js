@@ -8,6 +8,10 @@ import Link from "next/link";
 
 import styles from "../styles/Navbar.module.css";
 import { Dialog, DialogActions, DialogContent, TextField } from "@mui/material";
+import {
+  useLoginMutation,
+  useRegisterMutation,
+} from "../redux/features/allSlice";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -60,6 +64,42 @@ export const Navbar = () => {
 
   const extendElement1 = () => {
     dropdown1 ? setDropdown1(false) : setDropdown1(true);
+  };
+
+  // Registration
+  const [registerFunction, registerResponse] = useRegisterMutation();
+  const [registerData, setRegisterData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const handleRegisterChange = (e) => {
+    setRegisterData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const handleRegisterSubmit = async () => {
+    const response = await registerFunction(registerData);
+    console.log("Register Response", response);
+  };
+
+  // Login
+  const [loginFunction, loginResponse] = useLoginMutation();
+
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+  });
+  const handleLoginChange = (e) => {
+    setLoginData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const handleLoginSubmit = async () => {
+    const response = await loginFunction(loginData);
+    console.log("Login Response", response);
   };
 
   return (
@@ -212,13 +252,30 @@ export const Navbar = () => {
             </div>
           </div>
           <div>
-            <TextField label="Email" fullWidth style={{ margin: "15px 0px" }} />
             <TextField
-              label="Password"
+              name="name"
+              label="Name"
+              onChange={handleRegisterChange}
               fullWidth
-              style={{ margin: "15px 0px 5px 0px" }}
+              style={{ margin: "15px 0px" }}
             />
-            <span
+            <TextField
+              name="email"
+              type="email"
+              label="Email"
+              onChange={handleRegisterChange}
+              fullWidth
+              style={{ margin: "15px 0px" }}
+            />
+            <TextField
+              name="password"
+              type="password"
+              label="Password"
+              onChange={handleRegisterChange}
+              fullWidth
+              style={{ margin: "15px 0px 25px 0px" }}
+            />
+            {/* <span
               style={{
                 fontFamily: "Poppins",
                 fontStyle: "normal",
@@ -232,12 +289,13 @@ export const Navbar = () => {
               }}
             >
               Forgot Password?
-            </span>
+            </span> */}
           </div>
           <Button
             buttonStyle="btn--primary sizee"
             buttonSize="btn--small"
             stylee="stylee"
+            onClick={handleRegisterSubmit}
           >
             Signup
           </Button>
@@ -312,11 +370,21 @@ export const Navbar = () => {
           </div>
 
           <div>
-            <TextField label="Email" fullWidth style={{ margin: "15px 0px" }} />
             <TextField
-              label="Password"
+              name="email"
+              type="email"
+              label="Email"
+              onChange={handleLoginChange}
               fullWidth
-              style={{ margin: "15px 0px 5px 0px" }}
+              style={{ margin: "15px 0px" }}
+            />
+            <TextField
+              name="password"
+              type="password"
+              label="Password"
+              onChange={handleLoginChange}
+              fullWidth
+              style={{ margin: "15px 0px 25px 0px" }}
             />
             <button
               onClick={handleOpenForget}
@@ -339,6 +407,7 @@ export const Navbar = () => {
             buttonStyle="btn--primary sizee"
             buttonSize="btn--small"
             stylee="stylee"
+            onClick={handleLoginSubmit}
           >
             Login
           </Button>
