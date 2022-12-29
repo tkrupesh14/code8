@@ -15,6 +15,8 @@ import {
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { allApi } from "./features/allSlice";
 
+import authReducer from "./features/authSlice";
+
 const persistConfig = {
   timeout: 1000, // TODO: take a look at time out is there any problem with respect to presisted state
   key: "root",
@@ -22,6 +24,7 @@ const persistConfig = {
 };
 
 const reducers = combineReducers({
+  auth: authReducer,
   [allApi.reducerPath]: allApi.reducer,
 });
 

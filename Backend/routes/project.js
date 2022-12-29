@@ -12,7 +12,9 @@ router.post("/project", addProject);
 
 // get all projects
 router.get("/projects", getProjects);
+
 //get a single project
-router.get("/projects/:name", singleProject);
+// router.get("/projects/:name", singleProject);
+router.get("/project/:id", singleProject);
 
 module.exports = router;

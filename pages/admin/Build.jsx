@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Sidebar from "../../Admin/components/Sidebar";
 import styles from "../../styles/admin/Build.module.css";
@@ -8,6 +8,8 @@ import { BiSearchAlt } from "react-icons/bi";
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import dynamic from "next/dynamic";
+import { useAddProjectMutation } from "../../redux/features/allSlice";
+import { Alert, Snackbar } from "@mui/material";
 
 const MDEditor = dynamic(
   () => import("@uiw/react-md-editor").then((mod) => mod.default),
@@ -26,84 +28,142 @@ const Markdown = dynamic(
 );
 
 const Build = () => {
-  const [value, setValue] = useState(`
-  # 🚀 Documentation For Project
+  const [value, setValue] = useState(``);
 
-  ### Project Title: 🌦️  **WEATHER FORECAST WEBSITE**
-  ### Problem Statement: To determine how the atmosphere evolves in the future.
-  
-  1. ⌛ Short-term weather forecast prediction
-  2. 👆 To know different parameters of weather in single click.
-  3. 💻 Collect 5-day data in a single frame 
-  
-  ----------
-  
-  ## Idea/Solution:
-  
-  > *A seven-day forecast can accurately predict the weather about 80 percent of the time and a five-day forecast can accurately predict the weather approximately
-   90 percent of the time.*
-  
-  - Create a platform where you can get all type of measurements and activities related to weather.
-  - A page where you get 5-day weather data, that helps in your travelling planning for future. 
-  - Web page that provides current weather location for any city across India. 
-  
-  ### Tech Stack Used:-
-  
-  <p align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
-    </a>
-  </p>
-  
-  [Project Badge Link](https://shields.io/)
-  
-  
-  - HTML5
-  - CSS3
-  - BOOTSTRAP
-  - JAVASCRIPT 
-  - JQUERY
-  
-  ### Technical Description: 
-  **It is a weather forecasting website where you can enter your city names to collect the weather data for next 5-days, along with other parameters that helps you in your travel planning. As such when you enter your city name, it would create a request to current API used in this project. API then send the all the data and sub-parameters that fulfil your demand.**
-  
-  ### Prototyping Steps: 
-  
-  - We start from creating 3 main files in this project i.e., index.html, style.css and code.js
-  - In index.html file, we create a skeleton structure for our project, such as where to place, what to place etc.
-  - Also in index.html we import few resources that help to make our website more responsive such as bootstrap and jquerry libraries.
-  
-  - We’ve also import an API with its API key that’s helping in our web page to get the data. 
-  - We connect our API to our website through Jquerry function. 
-  - CSS and Bootstrap helps to get designing and maintain the styling of web page and entire website. 
-  - Atlast the javascript file helps us to store the data and represent the data as well as permit/request and 
-    access the request of the user as it is the browser’s language. 
-  
-  Prerequisites, Author, Collaborator
-  
-  
-  ## Resouces: XYZ
-  ### Download [Github link](https://github.com/ImAyansarkar/weather_app)
-  
-  ## Demo
-  ### [Netlify Link](https://heartfelt-cranachan-3f1b40.netlify.app/)
-  
-  
-  `);
+  const [projectData, setProjectData] = useState({
+    title: "",
+    description: "",
+    category: "",
+    level: "",
+  });
+
+  useEffect(() => {
+    setProjectData((prev) => ({
+      ...prev,
+      description: value,
+    }));
+  }, [value]);
+
+  const [addProjectFunction, addProjectResponse] = useAddProjectMutation();
+
+  const handleSubmit = () => {
+    addProjectFunction(projectData);
+  };
+  const handleChange = (e) => {
+    setProjectData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  useEffect(() => {
+    if (addProjectResponse.isSuccess) {
+      openMsg("Project Uploaded Succesfully!");
+      setProjectData({
+        title: "",
+        category: "",
+        description: "",
+        level: "",
+      });
+    } else if (addProjectResponse.isError) {
+      openMsg(addProjectResponse.error?.data?.message, "error");
+      console.log(addProjectResponse);
+    }
+  }, [addProjectResponse]);
+
+  console.log("Project Data: ", projectData);
+
+  const [msg, setMsg] = useState({ message: "", theme: "success" });
+  const openMsg = (message, theme = "success") => {
+    setMsg({
+      message,
+      theme: theme ? theme : "success",
+    });
+
+    handleClick();
+  };
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
 
   return (
     <div className={styles.wrapper}>
       <div>
         <Sidebar />
       </div>
-      <div className="w-full h-screen list-disc" data-color-mode="dark">
+      <div className="min-h-screen w-full list-disc" data-color-mode="dark">
+        <div className="px-10 py-5 flex justify-between">
+          <input
+            name="title"
+            placeholder="Title"
+            type="text"
+            className="bg-transparent w-72 border rounded-full px-5 border-black/50"
+            value={projectData.title}
+            onChange={handleChange}
+          />
+
+          <div className="flex items-center gap-3">
+            <p>Project Category</p>
+            <select
+              name={"category"}
+              id="category"
+              className="bg-transparent border border-black/50 rounded-md px-5 py-2 w-56"
+              value={projectData.category}
+              onChange={handleChange}
+            >
+              <option value="">Select Category</option>
+              <option value="WEB_DEVELOPMENT">Web Development</option>
+              <option value="APP_DEVELOPMENT">App Development</option>
+              <option value="BLOCKCHAIN">Blockchain</option>
+            </select>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <p>Project Level</p>
+            <select
+              name={"level"}
+              id="level"
+              className="bg-transparent border border-black/50 rounded-md px-5 py-2 w-44"
+              defaultValue={projectData.level}
+              onChange={handleChange}
+            >
+              <option value="">Select Level</option>
+              <option value="BEGINNER">Beginner</option>
+              <option value="INTERMEDIATE">Intermediate</option>
+              <option value="ADVANCED">Advanced</option>
+            </select>
+          </div>
+
+          <div>
+            <button
+              className="border px-5 py-2 rounded-full"
+              onClick={handleSubmit}
+            >
+              Upload Project
+            </button>
+          </div>
+        </div>
         <MDEditor height={"100%"} value={value} onChange={setValue} />
         <div style={{ paddingTop: 50 }}>
           <Markdown source={value} />
         </div>
-        {/* <EditerMarkdown source={value} /> */}
       </div>
 
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity={msg.theme}
+          sx={{ width: "100%" }}
+        >
+          {msg.message}
+        </Alert>
+      </Snackbar>
       {/* Previous Code */}
       {/* <div className={styles.mainscreen}>
         <div className={styles.buildHead}>

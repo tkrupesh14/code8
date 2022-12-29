@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import Navbar2 from "../components/Navbar2";
-import { Provider } from "react-redux";
+import { Provider, useSelector } from "react-redux";
 import store from "../redux/store";
 
 import { persistStore } from "redux-persist";
@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }) {
         persistor={persistor}
       >
         <Navbar />
-
         <Component {...pageProps} />
         <Footer />
       </PersistGate>

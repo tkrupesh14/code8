@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import Explorecategories from "../../components/project/Explorecategories";
 import Projects from "../../components/project/projects";
+import { useAllProjectsQuery } from "../../redux/features/allSlice";
 import styles from "../../styles/projects/Projectpage.module.css";
 const Projectpage = () => {
+  const allProjects = useAllProjectsQuery();
+  useEffect(() => {
+    allProjects.refetch();
+  }, []);
   return (
     <div className={`${styles.Projectpage}`}>
       <div className={`${styles.proj_head}`}>
@@ -18,10 +24,14 @@ const Projectpage = () => {
         </div>
       </div>
       <div className={`${styles.Projects_holder}`}>
-        <Projects />
-        <Projects />
-        <Projects />
-        <Projects />
+        {allProjects?.data?.projects?.map((project) => (
+          <Projects
+            key={project?._id}
+            title={project?.title}
+            description={project?.description}
+            id={project?._id}
+          />
+        ))}
       </div>
       <div className={`${styles.Categories}`}>
         <h1>Explore our categories</h1>

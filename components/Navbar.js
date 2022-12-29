@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./button/Button";
 import Link from "next/link";
-// import TextField from "@material-ui/core/TextField";
-// import Dialog from "@material-ui/core/Dialog";
-// import DialogActions from "@material-ui/core/DialogActions";
-// import DialogContent from "@material-ui/core/DialogContent";
 
 import styles from "../styles/Navbar.module.css";
-import { Dialog, DialogActions, DialogContent, TextField } from "@mui/material";
+import {
+  Alert,
+  Avatar,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  Snackbar,
+  TextField,
+} from "@mui/material";
 import {
   useLoginMutation,
   useRegisterMutation,
 } from "../redux/features/allSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { login, userState } from "../redux/features/authSlice";
 
 export const Navbar = () => {
+  const user = useSelector(userState);
+
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [openForget, setOpenForget] = useState(false);
@@ -66,6 +74,8 @@ export const Navbar = () => {
     dropdown1 ? setDropdown1(false) : setDropdown1(true);
   };
 
+  const dispatch = useDispatch();
+
   // Registration
   const [registerFunction, registerResponse] = useRegisterMutation();
   const [registerData, setRegisterData] = useState({
@@ -82,6 +92,11 @@ export const Navbar = () => {
   const handleRegisterSubmit = async () => {
     const response = await registerFunction(registerData);
     console.log("Register Response", response);
+    if (response?.data?.success) {
+      dispatch(login(response.data));
+      setOpen(false);
+      setOpen2(false);
+    }
   };
 
   // Login
@@ -99,12 +114,55 @@ export const Navbar = () => {
   };
   const handleLoginSubmit = async () => {
     const response = await loginFunction(loginData);
-    console.log("Login Response", response);
+    console.log("Login Response", response.data);
+    if (response?.data?.success) {
+      dispatch(login(response.data));
+      openMsg(response?.data?.message);
+      setOpen(false);
+      setOpen2(false);
+      // Show Error message
+    } else {
+      openMsg(response?.error?.data?.message, "error");
+    }
+  };
+
+  const [msg, setMsg] = useState({ message: "", theme: "success" });
+  const openMsg = (message, theme = "success") => {
+    setMsg({
+      message,
+      theme: theme ? theme : "success",
+    });
+
+    handleClick();
+  };
+  const [openAlert, setOpenAlert] = useState(false);
+  const handleClick = () => {
+    setOpenAlert(true);
+  };
+  const handleCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenAlert(false);
   };
 
   return (
     <div className={`${styles.navbar_c}`}>
       <nav className={`${styles.navbar_s}`}>
+        <Snackbar
+          open={openAlert}
+          autoHideDuration={6000}
+          onClose={handleCloseAlert}
+        >
+          <Alert
+            onClose={handleCloseAlert}
+            severity={msg.theme}
+            sx={{ width: "100%" }}
+          >
+            {msg.message}
+          </Alert>
+        </Snackbar>
+
         <Link href="/">
           <div className={`${styles.navbar_s_logo}`} onClick={closeMobileMenu1}>
             <img
@@ -164,7 +222,7 @@ export const Navbar = () => {
           <li className={`${styles.nav_item}`} onClick={closeMobileMenu1}>
             <div className={`${styles.login_sign}`}>
               <div className="btn-mobile">
-                {button1 && (
+                {!user?.user && button1 && (
                   <Button
                     buttonStyle="btn--primary btn--mobile"
                     buttonSize="btn--medium"
@@ -175,7 +233,7 @@ export const Navbar = () => {
                 )}
               </div>
               <div className="btn-mobile">
-                {button1 && (
+                {!user?.user && button1 && (
                   <Button
                     buttonStyle="btn--primary btn--mobile"
                     buttonSize="btn--medium"
@@ -187,6 +245,20 @@ export const Navbar = () => {
               </div>
             </div>
           </li>
+          {user?.user && (
+            <>
+              <Link href="/profile">
+                <li className="list-none cursor-pointer font-normal">
+                  {user?.user?.name}
+                </li>
+              </Link>
+              <Link href="/profile" className="rounded-full">
+                <div className="bg-blue-300 cursor-pointer font-semibold aspect-square w-12 grid place-content-center rounded-full">
+                  {user?.user?.name[0].toUpperCase()}
+                </div>
+              </Link>
+            </>
+          )}
         </ul>
 
         {pop && (

@@ -46,22 +46,26 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_SECRET_KEY,
 });
 
+// middlewares
+const errorMiddleware = require("./middlewares/errors");
+const { isAuthenticated } = require("./middlewares/auth");
+
 // routes
 const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/user"); // for project submittion
 const projectRoutes = require("./routes/project");
 const mentorRoutes = require("./routes/mentor");
 const menteeRoutes = require("./routes/mentee");
 const postRoutes = require("./routes/post");
 const testimonialRoutes = require("./routes/testimonial");
 app.use("/auth", authRoutes);
+app.use("/user", isAuthenticated, userRoutes); // for project submittion
 app.use(projectRoutes);
 app.use(mentorRoutes);
 app.use(testimonialRoutes);
 app.use(postRoutes);
 app.use(menteeRoutes);
 
-// middlewares
-const errorMiddleware = require("./middlewares/errors");
 app.use(errorMiddleware);
 
 app.listen(port, () => {
