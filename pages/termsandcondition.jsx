@@ -9,45 +9,24 @@ const Termsandcondition = () => {
         </h1>
 
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-          odio ipsa ipsum aliquam cupiditate amet, ex, esse sequi, atque minima
-          architecto velit doloremque? Aperiam dignissimos odit debitis,
-          doloribus dolores modi, quasi, error accusantium sed dicta et qui
-          quia. Magni, quidem! Sunt nostrum incidunt assumenda natus voluptatum
-          ratione saepe! Reiciendis dolorum deleniti illum, minus temporibus
-          quis laudantium dolores fugiat voluptatum molestias suscipit facere
-          necessitatibus repudiandae voluptate laboriosam! Nisi saepe quibusdam
-          ullam, magni aperiam aut nesciunt fugiat consequuntur asperiores ea
-          veniam corrupti aliquid assumenda minus dolorum reiciendis repudiandae
-          quis, officia beatae nulla. Iure similique nesciunt, molestias
-          doloribus facilis voluptate amet consectetur consequuntur.
+          Welcome to codeate.in . By accessing and using the Site, you agree to be bound by these terms and conditions (the "Terms"). If you do not agree to these Terms, please do not use the Site.
         </p>
 
         <div className="space-y-1">
-          <h3 className="text-2xl font-semibold text-violet-600">Cookies</h3>
+          <h3 className="text-2xl font-semibold text-violet-600">Eligibity</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            cumque facilis voluptate commodi ut totam in alias delectus unde!
-            Consequuntur accusantium quis mollitia sapiente excepturi,
-            aspernatur ullam voluptatem pariatur veritatis repellat rerum
-            quidem. Consequuntur obcaecati hic veniam et cum nesciunt! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium
-            inventore cupiditate porro atque eum quas explicabo quos in! Quasi?
+            The Site is intended for users who are at least 18 years of age. If you are under the age of 18, you are not permitted to use the Site.
+
           </p>
         </div>
         <div className="space-y-1">
-          <h3 className="text-2xl font-semibold text-violet-600">License</h3>
+          <h3 className="text-2xl font-semibold text-violet-600">Use of the Site</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            cumque facilis voluptate commodi ut totam in alias delectus unde!
-            Consequuntur accusantium quis mollitia sapiente excepturi,
-            aspernatur ullam voluptatem pariatur veritatis repellat rerum
-            quidem. Consequuntur obcaecati hic veniam et cum nesciunt! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium
-            inventore cupiditate porro atque eum quas explicabo quos in! Quasi?
+            The Site provides educational materials and resources to users. You are permitted to access and use these materials for personal, non-commercial purposes only. You may not use the Site for any illegal or inappropriate purposes, or engage in any activities that may disrupt or damage the Site or the services provided through it.
+
           </p>
 
-          <ol className="list-decimal pl-5 py-5">
+          {/* <ol className="list-decimal pl-5 py-5">
             <li>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
               beatae placeat perferendis nemo ratione libero ex repudiandae,
@@ -65,81 +44,63 @@ const Termsandcondition = () => {
               elit. Incidunt beatae placeat perferendis nemo ratione libero ex
               repudiandae, alias dicta sed in accusantium.
             </li>
-          </ol>
+          </ol> */}
 
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             assumenda, obcaecati numquam facilis ipsam sint aliquid vero itaque
             inventore veniam illo harum nulla ut, excepturi provident autem
             amet. Error quasi harum iusto, quis odio ut maxime quaerat eum in
             sequi id debitis inventore ipsa totam voluptates odit nemo velit
             provident!
+          </p> */}
+        </div>
+
+        <div className="space-y-1">
+          <h3 className="text-2xl font-semibold text-violet-600">
+            Intellectual Property
+          </h3>
+          <p>
+            The content on the Site, including text, images, and other materials, is protected by copyright and trademark laws. You may not use the Site's content for any commercial purposes without obtaining written permission from us.
+
           </p>
         </div>
 
         <div className="space-y-1">
           <h3 className="text-2xl font-semibold text-violet-600">
-            Your Privacy
+            Disclaimer of Liability
           </h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            cumque facilis voluptate commodi ut totam in alias delectus unde!
-            Consequuntur accusantium quis mollitia sapiente excepturi,
-            aspernatur ullam voluptatem pariatur veritatis repellat rerum
-            quidem. Consequuntur obcaecati hic veniam et cum nesciunt! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium
-            inventore cupiditate porro atque eum quas explicabo quos in! Quasi?
+            We make no representations or warranties of any kind, express or implied, as to the operation of the Site or the information, content, materials, or products included on the Site. We will not be liable for any damages of any kind arising from the use of the Site, including but not limited to direct, indirect, incidental, punitive, and consequential damages.
           </p>
         </div>
 
         <div className="space-y-1">
-          <h3 className="text-2xl font-semibold text-violet-600">
-            Content Liability
-          </h3>
+          <h3 className="text-2xl font-semibold text-violet-600">Governing Law</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            cumque facilis voluptate commodi ut totam in alias delectus unde!
-            Consequuntur accusantium quis mollitia sapiente excepturi,
-            aspernatur ullam voluptatem pariatur veritatis repellat rerum
-            quidem. Consequuntur obcaecati hic veniam et cum nesciunt! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium
-            inventore cupiditate porro atque eum quas explicabo quos in! Quasi?
+            These Terms and your use of the Site will be governed by and construed in accordance with the laws of the State of [State], without giving effect to any principles of conflicts of law.
           </p>
         </div>
 
         <div className="space-y-1">
-          <h3 className="text-2xl font-semibold text-violet-600">Disclaimer</h3>
+          <h3 className="text-2xl font-semibold text-violet-600">Payment Terms</h3>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            cumque facilis voluptate commodi ut totam in alias delectus unde!
-            Consequuntur accusantium quis mollitia sapiente excepturi,
-            aspernatur ullam voluptatem pariatur veritatis repellat rerum
-            quidem. Consequuntur obcaecati hic veniam et cum nesciunt! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Natus praesentium
-            inventore cupiditate porro atque eum quas explicabo quos in! Quasi?
+          If you choose to purchase any products or services through the Site, you will be required to provide payment information. You agree to pay all fees and charges associated with your purchase, and you authorize us to charge your designated payment method for the full amount of the purchase.
           </p>
-
-          <ol className="list-decimal pl-4 pt-4">
-            <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Similique asperiores nam repellendus atque, quia quas quibusdam,
-              veritatis a magni neque fugiat necessitatibus libero facilis?
-              Adipisci qui quisquam modi sequi aperiam, accusantium corrupti!
-            </li>
-            <li>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis earum, fugiat odio esse est hic officiis eum eaque quo
-              cum?
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              tempore soluta! Sit nostrum quam consectetur ex laborum ratione
-              dignissimos animi iste veritatis esse. Nobis cupiditate ipsa
-              culpa, sed magni molestiae. Ipsa corporis officia, voluptatibus
-              magni ipsum dolorum! Optio, nisi modi.
-            </li>
-          </ol>
         </div>
+
+        <div className="space-y-1">
+          <h3 className="text-2xl font-semibold text-violet-600">Modification of These Terms</h3>
+          <p>
+          We reserve the right to modify these Terms at any time. If we make changes to these Terms, we will post the revised version on the Site and update the "Effective Date" at the top of this page. Your continued use of the Site after the effective date of any changes to these Terms will constitute your acceptance of the revised terms.          </p>
+        </div>
+
+        <div className="space-y-1">
+          <h3 className="text-2xl font-semibold text-violet-600">Contact Us</h3>
+          <p>
+If you have any questions or concerns about these Terms or the Site, please contact us at <a className="underline text-blue-600" href="mailto:contact.us@codeate.in">contact.us@codeate.in</a> </p>
+        </div>
+
       </div>
     </div>
   );
