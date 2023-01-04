@@ -14,6 +14,7 @@ import {
 } from "redux-persist";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import { allApi } from "./features/allSlice";
+import { uploadFile } from "./features/fileUploadSlice";
 
 import authReducer from "./features/authSlice";
 
@@ -26,6 +27,7 @@ const persistConfig = {
 const reducers = combineReducers({
   auth: authReducer,
   [allApi.reducerPath]: allApi.reducer,
+  [uploadFile.reducerPath]: uploadFile.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducers);

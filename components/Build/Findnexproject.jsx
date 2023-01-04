@@ -82,11 +82,6 @@ const Findnexproject = () => {
             <button onClick={handleLearnMore} className="text-white text-xl">
               Learn more
             </button>
-            <Image
-              style={{ marginLeft: "15px" }}
-              src={SmallArrow}
-              alt="arrow"
-            />
           </div>
         </div>
       </div>

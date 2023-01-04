@@ -3,37 +3,58 @@ import styles from "../../styles/Build/Whatisbuild.module.css";
 
 const Whatisbuild = () => {
   return (
-    <div className={styles.Whatisbuild}>
-      <div className={styles.builttop}>
-        <div className={styles.builtpara}>
-          <div className={styles.build_head}>
-            Master your skill, one project at a time !
+    <div className="my-10 text-center">
+      <div className="">
+        <div className="">
+          <div className="text-7xl font-bold text-blue-500 drop-shadow shadow-yellow-500 max-w-5xl mx-auto leading-snug ">
+            Master your skill, <br /> one project at a time !
           </div>
-          <div
-            style={{
-              fontFamily: "Poppins",
-              fontSize: "1rem",
-              fontWeight: 400,
-              lineHeight: "20px",
-              letterSpacing: "0.02em",
-              textAlign: "center",
-            }}
-          >
+          <div className="text-center font-medium mx-auto text-lg mt-5 max-w-xl">
             We have created a wide range of build programs where you can hone
             your skill while working on projects.
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-              marginTop: "30px",
-            }}
-          >
-            <a href="#FindNextProject">Start Building Project</a>
-          </div>
+          <a className="my-5" href="#FindNextProject">
+            <div className="relative my-10 inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-800 group">
+              <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
+              <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                <svg
+                  className="w-5 h-5 text-green-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </span>
+              <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                <svg
+                  className="w-5 h-5 text-green-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </span>
+              <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
+                Start Building Project
+              </span>
+            </div>
+          </a>
         </div>
-        <img src="../images/Build/build.jpeg" />
+        <img className="max-w-3xl mx-auto mt-5" src="./images/illu1.png" />
       </div>
     </div>
   );

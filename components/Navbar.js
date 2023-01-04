@@ -13,11 +13,13 @@ import {
   TextField,
 } from "@mui/material";
 import {
+  useForgotPasswordMutation,
   useLoginMutation,
   useRegisterMutation,
 } from "../redux/features/allSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { login, userState } from "../redux/features/authSlice";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const user = useSelector(userState);
@@ -75,6 +77,7 @@ export const Navbar = () => {
   };
 
   const dispatch = useDispatch();
+  const router = useRouter();
 
   // Registration
   const [registerFunction, registerResponse] = useRegisterMutation();
@@ -120,11 +123,30 @@ export const Navbar = () => {
       openMsg(response?.data?.message);
       setOpen(false);
       setOpen2(false);
+      if (response?.data?.user?.isAdmin) {
+        router.push("/admin/Dashboard");
+      }
       // Show Error message
     } else {
       openMsg(response?.error?.data?.message, "error");
     }
   };
+
+  const [forgetPasswordEmail, setForgetPasswordEmail] = useState("");
+  const [forgetPasswordFunction, forgetPasswordResponse] =
+    useForgotPasswordMutation();
+
+  useEffect(() => {
+    if (forgetPasswordResponse?.isSuccess) {
+      openMsg(forgetPasswordResponse?.data?.message);
+      setOpen(false);
+      setOpen2(false);
+      handleCloseForget();
+    }
+    if (forgetPasswordResponse?.error) {
+      openMsg(forgetPasswordResponse?.error?.data?.message, "error");
+    }
+  }, [forgetPasswordResponse]);
 
   const [msg, setMsg] = useState({ message: "", theme: "success" });
   const openMsg = (message, theme = "success") => {
@@ -537,11 +559,17 @@ export const Navbar = () => {
           </div>
 
           <div>
-            <TextField label="Email" fullWidth style={{ margin: "15px 0px" }} />
+            <TextField
+              label="Email"
+              onChange={(e) => setForgetPasswordEmail(e.target.value.trim())}
+              fullWidth
+              style={{ margin: "15px 0px" }}
+            />
             <Button
               buttonStyle="btn--primary sizee"
               buttonSize="btn--small"
               stylee="stylee"
+              onClick={() => forgetPasswordFunction(forgetPasswordEmail)}
             >
               Submit
             </Button>
@@ -557,6 +585,7 @@ export const Navbar = () => {
                 buttonStyle="btn--outline sizee"
                 buttonSize="btn--small"
                 style={{ color: "#FFFFFF" }}
+                onClick={() => handleCloseForget()}
               >
                 Back to Login
               </Button>

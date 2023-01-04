@@ -28,8 +28,9 @@ const Projectpage = () => {
           <Projects
             key={project?._id}
             title={project?.title}
-            description={project?.description}
+            description={project?.shortDescription}
             id={project?._id}
+            technologies={project?.technologies}
           />
         ))}
       </div>

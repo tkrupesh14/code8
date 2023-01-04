@@ -4,6 +4,7 @@ const {
   enrolledProjects,
   enrolledProject,
   submitProject,
+  getAllUsers,
 } = require("../controllers/user");
 const { isAuthenticated } = require("../middlewares/auth");
 const userModel = require("../models/user");
@@ -13,5 +14,7 @@ router.post("/project", enrollAProject);
 router.get("/projects", enrolledProjects);
 router.get("/project/:projectId", enrolledProject);
 router.post("/project-submit", submitProject);
+
+router.get("/users", getAllUsers); // all users
 
 module.exports = router;

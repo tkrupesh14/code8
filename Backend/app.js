@@ -58,6 +58,7 @@ const mentorRoutes = require("./routes/mentor");
 const menteeRoutes = require("./routes/mentee");
 const postRoutes = require("./routes/post");
 const testimonialRoutes = require("./routes/testimonial");
+const fileUploadRoutes = require("./routes/fileUpload");
 app.use("/auth", authRoutes);
 app.use("/user", isAuthenticated, userRoutes); // for project submittion
 app.use(projectRoutes);
@@ -65,7 +66,7 @@ app.use(mentorRoutes);
 app.use(testimonialRoutes);
 app.use(postRoutes);
 app.use(menteeRoutes);
-
+app.use(fileUploadRoutes);
 app.use(errorMiddleware);
 
 app.listen(port, () => {

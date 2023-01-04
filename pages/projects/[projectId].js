@@ -4,6 +4,7 @@ import {
   useGetAEnrolledProjectMutation,
   useGetAProjectQuery,
   useGetEnrolledProjectsQuery,
+  useSubmitAProjectMutation,
 } from "../../redux/features/allSlice";
 import styles from "../../styles/projects/projectdesc.module.css";
 
@@ -14,7 +15,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { userState } from "../../redux/features/authSlice";
-import { Alert, Snackbar } from "@mui/material";
+import { Alert, Skeleton, Snackbar } from "@mui/material";
 
 const Markdown = dynamic(
   () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
@@ -27,7 +28,6 @@ const projectdesc = () => {
   const { data, isLoading, refetch } = useGetAProjectQuery(projectId);
   useEffect(() => {
     refetch();
-    enrolledProjectFunction(projectId);
   }, []);
 
   const [msg, setMsg] = useState({ message: "", theme: "success" });
@@ -50,9 +50,10 @@ const projectdesc = () => {
     setOpen(false);
   };
 
-  const [enrolledProjectFunction, enrolledProjectResponse] =
-    useGetAEnrolledProjectMutation();
+  const allEnrolledProjects = useGetEnrolledProjectsQuery();
   const [enrollFunction, enrollResponse] = useEnrollAProjectMutation();
+  const [submitFunction, submitResponse] = useSubmitAProjectMutation();
+
   const handleEnroll = () => {
     if (user) {
       enrollFunction(projectId);
@@ -62,19 +63,55 @@ const projectdesc = () => {
   useEffect(() => {
     if (enrollResponse?.isSuccess) {
       openMsg(enrollResponse?.data?.message);
-      enrolledProjectFunction(projectId);
+      allEnrolledProjects.refetch();
     }
     if (enrollResponse?.error) {
-      openMsg(enrollResponse?.error?.data?.message);
-      enrolledProjectFunction(projectId);
+      openMsg(enrollResponse?.error?.data?.message, "error");
+      allEnrolledProjects.refetch();
     }
   }, [enrollResponse]);
 
+  // Submit Form
+  const [submitData, setSubmitData] = useState({
+    githubLink: "",
+    deployedLink: "",
+  });
+
+  const handleSubmitChange = (e) => {
+    setSubmitData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  // Submit Project Function
+  const handleSubmitProject = () => {
+    submitFunction({ ...submitData, projectId });
+  };
+
+  useEffect(() => {
+    if (submitResponse?.isSuccess) {
+      openMsg(submitResponse?.data?.message);
+      allEnrolledProjects.refetch();
+    }
+    if (submitResponse?.error) {
+      openMsg(submitResponse?.error?.data?.message, "error");
+      allEnrolledProjects.refetch();
+    }
+  }, [submitResponse]);
+
+  // function handleShareOnLinkedin() {
+  //   const url = "https://www.linkedin.com/shareArticle?title=Hey%20Everyone...";
+  //   window.open(url, "_blank");
+  // }
+
+  if (!user) return null;
   return (
     <div>
       <div>
         {/* <div>{data?.project?.title}</div> */}
         <div>
+          {/* <button onClick={handleShareOnLinkedin}>Write LinkedIn Post</button> */}
           <div data-color-mode="light" className="max-w-4xl mx-auto my-10">
             <Markdown
               className="rounded-lg border shadow-lg py-5 px-10"
@@ -84,8 +121,8 @@ const projectdesc = () => {
         </div>
 
         <div className="text-center mt-5 mb-32">
-          {!user?.user?.projects?.find(
-            (project) => project.projectId == projectId
+          {!allEnrolledProjects.data?.projects?.find(
+            (p) => p.projectId._id == projectId
           ) ? (
             <button
               onClick={handleEnroll}
@@ -138,6 +175,7 @@ const projectdesc = () => {
                   placeholder="Github Link"
                   type="text"
                   className="bg-transparent w-72 border rounded-full py-3 px-5 border-black/50"
+                  onChange={handleSubmitChange}
                 />
               </div>
               <div className="flex items-center gap-3 justify-between">
@@ -147,11 +185,12 @@ const projectdesc = () => {
                   placeholder="Deployed Link"
                   type="text"
                   className="bg-transparent w-72 border rounded-full py-3 px-5 border-black/50"
+                  onChange={handleSubmitChange}
                 />
               </div>
               <div className="flex items-center gap-3 justify-center">
                 <button
-                  // onClick={handleEnroll}
+                  onClick={handleSubmitProject}
                   className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-gray-50 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-indigo-600 group"
                 >
                   <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
@@ -189,7 +228,7 @@ const projectdesc = () => {
                   </span>
 
                   <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-                    Submit
+                    Submit & Earn Certificate
                   </span>
                 </button>
               </div>

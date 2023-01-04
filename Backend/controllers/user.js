@@ -189,3 +189,12 @@ exports.submitProject = async (req, res) => {
     });
   }
 };
+
+// Get All Users
+exports.getAllUsers = async (req, res) => {
+  const users = await userModel.find().populate("projects.projectId");
+  return res.status(200).json({
+    success: true,
+    users,
+  });
+};

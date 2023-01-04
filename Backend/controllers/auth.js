@@ -89,11 +89,9 @@ exports.forgotPassword = async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   // create reset password Url
-  const resetUrl = `${req.protocol}//${req.get(
-    "host"
-  )}/password/reset/${resetToken}`;
+  // const resetUrl = `${req.protocol}://${req.get("host")}/${resetToken}`;
   // for testing purpose--------------------
-  // const resetUrl = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
+  const resetUrl = `${process.env.FRONTEND_URL}/${resetToken}`;
 
   // message
   const message = `You Requested for Password Reset. \n\nYour Password Reset Link is Given Below: \n\n${resetUrl}\n\n\nIf You Have Not Requested For Reset Password, then Ignore This Mail`;

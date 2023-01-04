@@ -9,6 +9,14 @@ const projectMarkdownSchema = new mongoose.Schema(
       type: String,
       required: [true, "Project Description is required"],
     },
+    shortDescription: {
+      type: String,
+      required: [true, "Project Short Description is required"],
+    },
+    imageURL: {
+      type: String,
+    },
+    technologies: [],
     category: {
       type: String,
       enum: ["WEB_DEVELOPMENT", "APP_DEVELOPMENT", "BLOCKCHAIN"],

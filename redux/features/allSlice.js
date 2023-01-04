@@ -38,6 +38,29 @@ export const allApi = createApi({
       }),
     }),
 
+    // Forgot Password
+    forgotPassword: builder.mutation({
+      query: (email) => ({
+        url: "/auth/password/forgot",
+        method: "POST",
+        body: {
+          email,
+        },
+      }),
+    }),
+
+    // Reset Password
+    resetPassword: builder.mutation({
+      query: ({ resetPasswordToken, password, confirmPassword }) => ({
+        url: `/auth/password/reset/${resetPasswordToken}`,
+        method: "PUT",
+        body: {
+          password,
+          confirmPassword,
+        },
+      }),
+    }),
+
     // Project
     addProject: builder.mutation({
       query: (body) => ({
@@ -90,6 +113,14 @@ export const allApi = createApi({
         },
       }),
     }),
+
+    // AllUsers
+    getAllUsers: builder.query({
+      query: () => ({
+        url: "/user/users",
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -97,6 +128,8 @@ export const {
   useRegisterMutation,
   useLoginMutation,
   useLogoutMutation,
+  useForgotPasswordMutation,
+  useResetPasswordMutation,
 
   useAddProjectMutation,
   useAllProjectsQuery,
@@ -106,4 +139,6 @@ export const {
   useGetAEnrolledProjectMutation,
   useGetEnrolledProjectsQuery,
   useSubmitAProjectMutation,
+
+  useGetAllUsersQuery,
 } = allApi;
