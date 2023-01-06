@@ -155,7 +155,13 @@ const Dashboard = () => {
             <div className="bg-slate-800 text-white rounded-md shadow-md px-5 py-3 ">
               <p>Total Submitted Projects</p>
               <p className="text-5xl text-right">
-                {/* {allUsers?.users?.filter} */}
+                {console.log(
+                  allUsers?.users
+                    ?.map((user) =>
+                      user?.projects?.filter((project) => project.isSubmitted)
+                    )
+                    ?.reduce((prev, current) => current + prev.isSubmitted, 0)
+                )}
               </p>
             </div>
             <div className="bg-slate-800 text-white rounded-md shadow-md px-5 py-3 ">

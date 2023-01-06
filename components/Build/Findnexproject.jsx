@@ -6,6 +6,7 @@ import { Alert, Snackbar } from "@mui/material";
 import { useSelector } from "react-redux";
 import { userState } from "../../redux/features/authSlice";
 import { useRouter } from "next/router";
+import { FaArrowRight } from "react-icons/fa";
 
 const Findnexproject = () => {
   const [msg, setMsg] = useState({ message: "", theme: "success" });
@@ -42,45 +43,130 @@ const Findnexproject = () => {
 
   return (
     <div className="text-center pt-32" id="FindNextProject">
-      <h1 className={"text-3xl font-bold pb-10"}>Find your Next Project</h1>
-      <div className={styles.Projectbuild_body}>
-        <div className={styles.Project_template}>
-          <div className={styles.Project_lvl}>Begginer</div>
-          <div className={styles.Project_content}>
-            Find a beginner level project for you. Which requires entry level
-            skills and short time to complete.
-          </div>
-          <div className={styles.Progrct_link}>
-            <a href="/project_cat?level=Begginer"> Learn more </a>
-            <Image
-              style={{ marginLeft: "15px" }}
-              src={SmallArrow}
-              alt="small-arrow"
+      <svg
+        className="absolute right-0 -z-0 mt-56"
+        width="1018"
+        height="1109"
+        viewBox="0 0 1018 1109"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_147_1030)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M1030.5 479.599C989.131 216.712 742.485 37.1352 479.599 78.5024C216.712 119.87 37.1353 366.516 78.5025 629.402C119.87 892.289 366.516 1071.87 629.402 1030.5C892.289 989.131 1071.87 742.485 1030.5 479.599ZM471.909 29.6327C761.785 -15.9815 1033.75 182.032 1079.37 471.909C1124.98 761.785 926.969 1033.75 637.092 1079.37C347.216 1124.98 75.2471 926.969 29.6328 637.092C-15.9814 347.216 182.032 75.247 471.909 29.6327Z"
+            fill="url(#paint0_radial_147_1030)"
+          />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_147_1030"
+            x="0.0976562"
+            y="0.097229"
+            width="1108.81"
+            height="1108.81"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="11.5"
+              result="effect1_foregroundBlur_147_1030"
+            />
+          </filter>
+          <radialGradient
+            id="paint0_radial_147_1030"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(674.359 189.06) rotate(74.043) scale(1430.04)"
+          >
+            <stop stop-color="#5FD6DA" />
+            <stop offset="0.371298" stop-color="#2D9BFD" />
+            <stop offset="0.701752" stop-color="#BA84FE" />
+            <stop offset="1" stop-color="#FE5C97" />
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <h1 className={"z-50 title text-6xl font-bold pb-20"}>
+        Find your Next Project
+      </h1>
+      <div className="grid grid-cols-3 text-left gap-10 place-content-around mx-32">
+        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border border-white/20  to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:backdrop-blur-3xl hover:scale-105 group duration-500 rounded-3xl">
+          <div>
+            <img
+              src="./images/icons/beginner.png"
+              className="h-20 -ml-3"
+              alt=""
             />
           </div>
-        </div>
-        <div className={styles.Project_template}>
-          <div className={styles.Project_lvl}>Intermediate</div>
-          <div className={styles.Project_content}>
-            It&apos;s a mid skill project range where you can work on a
-            particular project for a long span of time individually or in a
-            team. It involves multi domain skills to get the project done.
+          <div className="text-4xl font-semibold group-hover:-rotate-1 duration-500 mt-5 mb-10 text-pink-500">
+            Beginner
           </div>
-          <div className={styles.Progrct_link}>
-            <a href="/project_cat?level=Intermediate"> Learn more </a>
-            <Image style={{ marginLeft: "15px" }} src={SmallArrow} alt="" />
-          </div>
-        </div>
-        <div className={styles.Project_template}>
-          <div className={styles.Project_lvl}>Advanced</div>
-          <div className={styles.Project_content}>
-            It&apos;s a whole team project, which directs towards solving
-            particular problems and developing an MVP As an innovative solution.
-            Here you work with mentors in real time to get the task done
+          <div className="mb-5 group-hover:-rotate-1 duration-500 text-justify">
+            This level requires the basic level of knowledge to build projects.
+            Start building your first project now.
           </div>
           <div>
-            <button onClick={handleLearnMore} className="text-white text-xl">
-              Learn more
+            <button
+              onClick={handleLearnMore}
+              className="text-pink-500 group-hover:-rotate-1 duration-500  flex items-center gap-2 font-bold text-xl"
+            >
+              Start Building <FaArrowRight />
+            </button>
+          </div>
+        </div>
+        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border border-white/20 to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:scale-105 group duration-500 rounded-3xl">
+          <div>
+            <img src="./images/icons/inter.png" className="h-20 -ml-3" alt="" />
+          </div>
+          <div className="text-4xl font-semibold group-hover:-rotate-1 duration-500 mt-5 mb-10 text-pink-500">
+            Intermediate
+          </div>
+          <div className="mb-5 group-hover:-rotate-1 duration-500 text-justify">
+            This level requires little complex understanding of concepts. This
+            helps you build more functional projects with extra complexity.
+          </div>
+          <div>
+            <button
+              onClick={handleLearnMore}
+              className="text-pink-500 group-hover:-rotate-1 duration-500  flex items-center gap-2 font-bold text-xl"
+            >
+              Start Building <FaArrowRight />
+            </button>
+          </div>
+        </div>
+        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border-2 border-white/20 to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:scale-105 group duration-500 rounded-3xl">
+          <div>
+            <img
+              src="./images/icons/intermediate.png"
+              className="h-20 -ml-3"
+              alt=""
+            />
+          </div>
+          <div className="text-4xl font-semibold group-hover:-rotate-1 duration-500 mt-5 mb-10 text-pink-500">
+            Advanced
+          </div>
+          <div className="mb-5 group-hover:-rotate-1 duration-500 text-justify">
+            This level of projects may require you dynamic skill sets and you
+            can start building with the team to achieve the goals along with
+            real life problem solving.
+          </div>
+          <div>
+            <button
+              onClick={handleLearnMore}
+              className="text-pink-500 group-hover:-rotate-1 duration-500  flex items-center gap-2 font-bold text-xl"
+            >
+              Start Building <FaArrowRight />
             </button>
           </div>
         </div>

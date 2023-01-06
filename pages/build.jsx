@@ -9,9 +9,9 @@ import Writtinghelloworld from "../components/Build/Writtinghelloworld";
 
 const build = () => {
   return (
-    <div className="build">
+    <div className="build bg-black text-white">
       <Whatisbuild />
-      <Writtinghelloworld />
+      {/* <Writtinghelloworld /> */}
       <WhyWithUs />
       <Howitworks />
       <Findnexproject />

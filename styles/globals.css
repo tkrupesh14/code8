@@ -48,6 +48,46 @@ li {
   list-style-type: disc;
 }
 
+.title {
+  /* @apply font-extrabold text-transparent text-8xl outline-1 font-outline-2 bg-clip-text bg-gradient-to-b from-pink-500 to-blue-600 via-cyan-400 z-50 mx-auto; */
+  background: #7c00cf;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #c100cf 17%,
+    #1d3af6 61%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer base {
+  .font-outline-2 {
+    /* -webkit-text-stroke: 1px white; */
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px black;
+  }
+}
+
+.card-animation {
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 500ms;
+}
+.card-animation:hover {
+  /* animation: cardBg 500ms ease-in-out; */
+  background-position: right;
+}
+
+@keyframes cardBg {
+  /* from {
+    border: 1px solid rgb(8, 158, 232);
+  }
+  to {
+    border: 2px solid rgb(8, 158, 232);
+  } */
+}
+
 .gradient-bg-welcome {
   background-color: #0f0e13;
   background-image: radial-gradient(
