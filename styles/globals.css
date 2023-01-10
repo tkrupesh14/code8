@@ -50,14 +50,27 @@ li {
 
 .title {
   /* @apply font-extrabold text-transparent text-8xl outline-1 font-outline-2 bg-clip-text bg-gradient-to-b from-pink-500 to-blue-600 via-cyan-400 z-50 mx-auto; */
-  background: #7c00cf;
+  position: relative;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: calc(20px + 5vw);
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 0.02em;
+  text-shadow: -1px -1px 0.2em #ffe75fba;
+  user-select: none;
+  white-space: nowrap;
+  filter: blur(0.007em);
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+  /* background: #7c00cf;
   background: radial-gradient(
     circle farthest-corner at center center,
-    #c100cf 17%,
+    #9a02f1 17%,
     #1d3af6 61%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 @layer base {
@@ -86,6 +99,12 @@ li {
   to {
     border: 2px solid rgb(8, 158, 232);
   } */
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(115%);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .gradient-bg-welcome {

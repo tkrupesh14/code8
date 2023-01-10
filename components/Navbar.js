@@ -283,7 +283,7 @@ export const Navbar = () => {
           )}
         </ul>
 
-        {pop && (
+        {/* {pop && (
           <div className={`${styles.Popup}`}>
             <div className={`${styles.popup_head}`}>
               <div className="close-button">
@@ -302,7 +302,7 @@ export const Navbar = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </nav>
       <Dialog
         open={open2}

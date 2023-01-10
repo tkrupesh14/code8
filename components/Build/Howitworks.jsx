@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "../../styles/Build/Howitworks.module.css";
 import gsap from "gsap";
+import Image from "next/image";
 
 const Howitworks = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const Howitworks = () => {
     // </div>
     <div className="text-center relative">
       <h1 className="title text-6xl font-semibold">How it works</h1>
-      <p className="text-white/5 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
+      <p className="text-white/10 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
         WORKS
       </p>
       <p className="max-w-3xl mx-auto mt-5">
@@ -56,37 +57,53 @@ const Howitworks = () => {
         goals in no time.
       </p>
 
-      <div className="max-w-2xl mx-auto mt-20">
-        <ol class="relative border-l border-gray-200 dark:border-gray-700">
-          <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800">
-              1
+      <div className="max-w-4xl mx-auto mt-20">
+        <ol class="relative border-l border-white/30 drop-shadow-xl shadow-orange-300 space-y-16">
+          <li class="mb-10 ml-6 group ">
+            <span class="absolute flex items-center justify-center w-10 duration-300 group-hover:scale-150 aspect-square group-hover:shadow-xl group-hover:shadow-purple-200 bg-blue-200 rounded-full -left-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800">
+              <Image
+                className=""
+                src={"/images/icons/join.png"}
+                layout="fill"
+              />
             </span>
-            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 class="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
               Join the learning programs and cohorts in code8 community
             </h3>
           </li>
-          <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              2
+          <li class="mb-10 ml-6 group">
+            <span class="absolute flex items-center justify-center w-10 duration-300 group-hover:scale-150 aspect-square group-hover:shadow-xl group-hover:shadow-purple-200 bg-blue-200 rounded-full -left-5 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-100">
+              <Image
+                className=""
+                src={"/images/icons/book.png"}
+                layout="fill"
+              />
             </span>
-            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 class="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
               Learn with the mentors from top companies .
             </h3>
           </li>
-          <li class="mb-10 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              3
+          <li class="mb-10 ml-6 group">
+            <span class="absolute flex items-center justify-center w-10 duration-300 group-hover:scale-150 aspect-square group-hover:shadow-xl group-hover:shadow-purple-200 bg-blue-200 rounded-full -left-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800">
+              <Image
+                className=""
+                src={"/images/icons/target.png"}
+                layout="fill"
+              />
             </span>
-            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 class="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
               Take the challenge and start building a project of your choice.
             </h3>
           </li>
-          <li class="ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              4
+          <li class="ml-6 group">
+            <span class="absolute flex items-center justify-center w-10 duration-300 group-hover:scale-150 aspect-square group-hover:shadow-xl group-hover:shadow-purple-200 bg-blue-200 rounded-full -left-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800">
+              <Image
+                className=""
+                src={"/images/icons/join.png"}
+                layout="fill"
+              />
             </span>
-            <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+            <h3 class="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
               Submit the project and earn badges and certificates.
             </h3>
           </li>

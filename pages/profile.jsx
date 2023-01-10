@@ -91,7 +91,10 @@ const Profile = () => {
 
                     <div className="w-full lg:w-10/12 px-4 ">
                       {allEnrolledProjects?.data?.projects?.map((project) => (
-                        <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
+                        <p
+                          key={project._id}
+                          className="mb-4 text-lg leading-relaxed text-blueGray-700"
+                        >
                           {project.projectId.title} : {project.projectId.level}
                         </p>
                       ))}
