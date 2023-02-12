@@ -7,35 +7,22 @@ import styles from '../styles/Footer.module.css'
 const Footer = () => {
     return (
         <>
-            <footer>
-                <div className={styles.footer__container}>
-                    <div className={styles.ooter__logo}>
-                        <Link href="/" className={styles.social__logo}>
-                            <Image src={Logo} alt="logo" />
-                        </Link>
-                    </div>
-                    <section className={styles.footer__subscription}>
-                        <h2 className={styles.footer__subscription__heading}>Newsletter</h2>
-                        <div className={styles.input__areas}>
-                            <form>
-                                <input
-                                    className={styles.footer__input}
-                                    name="email"
-                                    type="email"
-                                    placeholder="Your Email"
-                                />
-                                <br />
-                                <buthrefn
-                                    type="submit"
-                                    className="btn btn--sub"
-                                    style={{ margin: "0" }}
-                                >
-                                    Submit
-                                </buthrefn>
-                            </form>
-                        </div>
-                        <section className={styles.social__media}>
-                            <div className={styles.social__icons}>
+           <footer class="bg-gradient-to-r from-gray-900 to-gray-900">
+                <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                        <div>
+                            <Image src={Logo} width="130px" height="75px"></Image>
+                            <p class="max-w-xs mt-4 text-sm text-gray-600">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+                            </p>
+                            <div className="newsletter-footer-section mt-2">
+                                <form action="#" method="post">
+                                    <input type="email" name='newsletter-footer' id='newsletter-footer' className='bg-transparent border border-blue-600 rounded-full p-1 w-1/2 text-sm' placeholder='subscribe to newsletter' />
+                                    <input type="submit" value="Subscribe" className='p-2 m-2 text-white rounded-full bg-blue-600 cursor-pointer' />
+                                </form>
+                            </div>
+                            <div class="flex mt-8 space-x-6 text-gray-600">
+
                                 <a
                                     className={styles.social__icon__link}
                                     href="https://chat.whatsapp.com/Dy5uAVlpzFj3ent90TMjeW"
@@ -45,7 +32,6 @@ const Footer = () => {
                                 >
                                     <FaWhatsapp />
                                 </a>
-
                                 <a
                                     className={styles.social__icon__link}
                                     href="https://instagram.com/codeate.in?igshid=YmMyMTA2M2Y="
@@ -76,53 +62,57 @@ const Footer = () => {
                                     <FaLinkedin />
                                 </a>
                             </div>
-                        </section>
-                    </section>
-
-                    <div className={styles.footer__links}>
-                        <div className={styles.footer__link__wrapper}>
-                            <div className={styles.footer__link__items}>
-                                <h2 className={styles.footer__title}>Our Offerings</h2>
-                                <Link href="/built">Build</Link>
-                                <Link href="/learn">Learn</Link>
-                                <Link href="/community">Community</Link>
-                            </div>
-                            <div className={styles.footer__link__items}>
-                                <h2 className={styles.footer__title}>Quick Links</h2>
-                                <Link href="/">Home</Link>
-                                <Link href="/about-us">About</Link>
-                                <Link href="learn">Blogs</Link>
-                            </div>
                         </div>
-                        <div className={styles.footer__link__wrapper}>
-                            <div className={styles.footer__link__items}>
-                                <h2 className={styles.footer__title}>Contact Us</h2>
-                                <p className={styles.p__address}>
-                                    Flat No. 117, Block C, Sunrise Residency, Rukmini enclave,
-                                    Bolarum, Hyderbad.(500010)
+                        <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+                            <div>
+                                <p class="font-medium">
+                                    Company
                                 </p>
-                                <a href="mailhref:contact.code8@gmail.com">contact.us@codeate.in</a>
-                                <p>+91 8602444273</p>
+                                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                                    <a class="hover:opacity-75" href> About </a>
+                                    <a class="hover:opacity-75" href> Meet the Team </a>
+                                    <a class="hover:opacity-75" href> History </a>
+                                    <a class="hover:opacity-75" href> Careers </a>
+                                </nav>
+                            </div>
+                            <div>
+                                <p class="font-medium">
+                                    Services
+                                </p>
+                                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                                    <a class="hover:opacity-75" href> 1on1 Coaching </a>
+                                    <a class="hover:opacity-75" href> Company Review </a>
+                                    <a class="hover:opacity-75" href> Accounts Review </a>
+                                    <a class="hover:opacity-75" href> HR Consulting </a>
+                                    <a class="hover:opacity-75" href> SEO Optimisation </a>
+                                </nav>
+                            </div>
+                            <div>
+                                <p class="font-medium">
+                                    Helpful Links
+                                </p>
+                                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                                    <a class="hover:opacity-75" href> Contact </a>
+                                    <a class="hover:opacity-75" href> FAQs </a>
+                                    <a class="hover:opacity-75" href> Live Chat </a>
+                                </nav>
+                            </div>
+                            <div>
+                                <p class="font-medium">
+                                    Legal
+                                </p>
+                                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                                    <a class="hover:opacity-75" href> Privacy Policy </a>
+                                    <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
+                                    <a class="hover:opacity-75" href> Returns Policy </a>
+                                    <a class="hover:opacity-75" href> Accessibility </a>
+                                </nav>
                             </div>
                         </div>
                     </div>
-                </div>
-                <hr />
-                <div className={styles.subfooter}>
-                    <div className={styles.subfooter__container}>
-                        <div className={styles.subfooter__items}>
-                        <Link href="/forms">
-                            <h1 className={styles.subfooter__text}>Forms</h1>
-                            </Link>
-                            <h1 className={styles.subfooter__text}>Terms & conditions</h1>
-                            <Link href="/privacy">
-                                <h1 className={styles.subfooter__text}>Policy</h1>
-                            </Link>
-                            <h1 className={styles.subfooter__text}>Data Security</h1>
-                            <h1 className={styles.subfooter__text}>Help & Support</h1>
-                            <h1 className={styles.subfooter__text}>Chat</h1>
-                        </div>
-                    </div>
+                    <p class="mt-8 text-xs text-gray-800">
+                        © 2023 Code8
+                    </p>
                 </div>
             </footer>
         </>

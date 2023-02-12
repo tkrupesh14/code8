@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 
 const Card = (props) => {
   return (
-    <div className={`${styles.testimonial_card}  testimonial-card`}>
+    <div className={`${styles.testimonial_card} group-hover:bg-blue-600 duration-1000 testimonial-card`}>
       <img
         className={`${styles.img_home}`}
         style={{ borderRadius: "50%" }}
@@ -88,7 +88,7 @@ const Testimonial = () => {
   return (
     <div className={`${styles.Testimonial}`}>
       <div className={`${styles.Testimonial_head}`}>
-        <h1>Testimonials</h1>
+        <h1 className="title text-5xl mb-10">Testimonials</h1>
       </div>
       <h2>Some amazing experiences from techies around.</h2>
       <div className={`${styles.Testimonial_holder}`}>
@@ -113,6 +113,7 @@ const Testimonial = () => {
                   orgnaization={item.orgnaization}
                   image_url={item.image_url}
                   description={item.description}
+                  className=""
                 />
               </SwiperSlide>
             );

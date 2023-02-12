@@ -35,13 +35,13 @@ const Sidebar = () => {
             Build
           </li>
         </Link>
-        <Link href='/admin/Learn' passHref >
+        <Link href='/admin/learn' passHref >
           <li className={styles.item}>
             <BiChalkboard className={styles.menuIcon} />
             Learn
           </li>
         </Link>
-        <Link href='/admin/Community' passHref >
+        <Link href='/admin/community' passHref >
           <li className={styles.item}>
             <FaUsers className={styles.menuIcon} />
             Community

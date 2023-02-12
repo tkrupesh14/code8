@@ -1,6 +1,7 @@
 .Testimonial{
     font-family: 'Poppins';
     text-align: center;
+    margin-top: 20px;
 }
 
 .Testimonial_holder{
@@ -31,7 +32,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 1.1rem;
-    background: #c6d9e2;
+    background: #424242;
     padding: 1.2rem;
     border-radius: 25px;
     max-width: 400px;

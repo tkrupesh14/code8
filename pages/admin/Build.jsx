@@ -155,10 +155,12 @@ const Build = () => {
         <Sidebar />
       </div>
       <div className="min-h-screen w-full list-disc" data-color-mode="dark">
+        <h1 className="font-semibold text-4xl p-5">Build</h1>
+        <hr />
         <div className="grid grid-cols-2 gap-10">
           <div className="px-10 py-5 flex flex-col justify-between gap-5">
             <div className="flex justify-between items-center">
-              <p>Title</p>
+              <label htmlFor="" className="pr-10">Title </label>
               <input
                 name="title"
                 placeholder="Title"
@@ -170,7 +172,7 @@ const Build = () => {
             </div>
 
             <div className="flex items-center gap-3 justify-between">
-              <p>Project Category</p>
+              <label htmlFor="" className="pr-10">Project Category</label>
               <select
                 name={"category"}
                 id="category"
@@ -186,14 +188,14 @@ const Build = () => {
             </div>
 
             <div className="flex items-center gap-3 justify-between">
-              <p>Project Level</p>
+              <label htmlFor="" className="pr-10">Project Level</label>
               <select
                 name={"level"}
                 id="level"
                 className="bg-transparent border border-black/50 rounded-md px-5 py-2 w-44"
                 defaultValue={projectData.level}
                 onChange={handleChange}
-              >
+              >https://code8-s3.s3.ap-south-1.amazonaws.com/Logo/LOGO+HORIZONTAL+blue+grad.png
                 <option value="">Select Level</option>
                 <option value="BEGINNER">Beginner</option>
                 <option value="INTERMEDIATE">Intermediate</option>
@@ -203,7 +205,7 @@ const Build = () => {
 
             <div>
               <button
-                className="border px-5 py-2 rounded-full hover:border-green-600 duration-200 hover:bg-green-400"
+                className="bg-blue-500 text-white rounded-full px-4 py-1 hover:bg-blue-600"
                 onClick={handleSubmit}
               >
                 Upload Project
@@ -212,6 +214,7 @@ const Build = () => {
           </div>
 
           <div className="px-10 py-5 flex flex-col gap-5 justify-between">
+            <label htmlFor="" className="pr-10">Short Description</label>
             <textarea
               name="shortDescription"
               placeholder="Short Description..."
@@ -222,6 +225,7 @@ const Build = () => {
             />
 
             <form onSubmit={handleFileUpload}>
+              <label htmlFor="" className="pr-10">Choose File</label>
               <label class="flex items-center">
                 <span class="sr-only">Choose File</span>
                 <input
@@ -258,8 +262,8 @@ const Build = () => {
               {/* <Select options={Hotels} onChange={setHandle} isMulti /> */}
               {/* <div>{selectedOptions}</div> */}
 
-              <p>Technologies Used</p>
               <form onSubmit={handleTechSubmit}>
+              <label htmlFor="" className="pr-10">Technologies Used</label>
                 <input
                   name="tech"
                   value={tech}
@@ -307,8 +311,9 @@ const Build = () => {
           </div>
         </div>
 
+        <label htmlFor="" className="p-10 mb-10">Desctiption:</label>
         <MDEditor height={"100%"} value={value} onChange={setValue} />
-        <div style={{ paddingTop: 50 }}>
+        <div style={{ paddingTop: 50 }} className="mt-10">
           <Markdown source={value} />
         </div>
       </div>

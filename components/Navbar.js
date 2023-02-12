@@ -20,6 +20,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { login, userState } from "../redux/features/authSlice";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const user = useSelector(userState);
@@ -169,8 +170,8 @@ export const Navbar = () => {
   };
 
   return (
-    <div className={`${styles.navbar_c}`}>
-      <nav className={`${styles.navbar_s}`}>
+    <div className={`bg-gradient-to-tr to-violet-500 from-violet-500`}>
+      <nav className={`flex justify-between px-10 py-2`}>
         <Snackbar
           open={openAlert}
           autoHideDuration={6000}
@@ -186,12 +187,8 @@ export const Navbar = () => {
         </Snackbar>
 
         <Link href="/">
-          <div className={`${styles.navbar_s_logo}`} onClick={closeMobileMenu1}>
-            <img
-              src="/images/code8.png"
-              alt="code8-logo"
-              className={`${styles.logo_nav}`}
-            ></img>
+          <div className={``} onClick={closeMobileMenu1}>
+            <img src="/images/code8.png" alt="code8-logo" className={``}></img>
           </div>
         </Link>
 
@@ -205,43 +202,65 @@ export const Navbar = () => {
             click1 ? styles.active : styles.hidden
           }`}
         >
-          <li className={`${styles.nav_item}`}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            className={`${styles.nav_item}`}
+          >
             <Link href="/">
               <div className={`${styles.nav_links}`} onClick={closeMobileMenu1}>
                 Home
               </div>
             </Link>
-          </li>
+          </motion.li>
 
-          <li className={`${styles.nav_item}`}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            className={`${styles.nav_item}`}
+          >
             <Link href="/about">
               <div className={`${styles.nav_links}`} onClick={closeMobileMenu1}>
                 About us
               </div>
             </Link>
-          </li>
+          </motion.li>
 
-          <li className={`${styles.nav_item}`} onClick={extendElement1}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            className={`${styles.nav_item}`}
+            onClick={extendElement1}
+          >
             <Link href="/build">
               <div className={`${styles.nav_links}`} onClick={closeMobileMenu1}>
                 Build
               </div>
             </Link>
-          </li>
+          </motion.li>
 
-          <li className={`${styles.nav_item}`} onClick={closeMobileMenu1}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            className={`${styles.nav_item}`}
+            onClick={closeMobileMenu1}
+          >
             <Link href="/learn">
               <div className={`${styles.nav_links}`}>Learn</div>
             </Link>
-          </li>
+          </motion.li>
 
-          <li className={`${styles.nav_item}`} onClick={closeMobileMenu1}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            className={`${styles.nav_item}`}
+            onClick={closeMobileMenu1}
+          >
             <Link href="/community">
               <div className={`${styles.nav_links}`}>Community</div>
             </Link>
-          </li>
+          </motion.li>
 
-          <li className={`${styles.nav_item}`} onClick={closeMobileMenu1}>
+          <motion.li
+            whileHover={{ scale: 1.02 }}
+            className={`${styles.nav_item}`}
+            onClick={closeMobileMenu1}
+          >
             <div className={`${styles.login_sign}`}>
               <div className="btn-mobile">
                 {!user?.user && button1 && (
@@ -266,17 +285,25 @@ export const Navbar = () => {
                 )}
               </div>
             </div>
-          </li>
+          </motion.li>
           {user?.user && (
             <>
               <Link href="/profile">
-                <li className="list-none cursor-pointer font-normal">
+                <motion.li
+                  whileHover={{ scale: 1.02 }}
+                  className="list-none cursor-pointer font-normal"
+                >
                   {user?.user?.name}
-                </li>
+                </motion.li>
               </Link>
               <Link href="/profile" className="rounded-full">
-                <div className="bg-blue-300 cursor-pointer font-semibold aspect-square w-12 grid place-content-center rounded-full">
-                  {user?.user?.name[0].toUpperCase()}
+                <div className="cursor-pointer font-semibold aspect-square w-12 grid place-content-center ">
+                  {/* {user?.user?.name[0].toUpperCase()} */}
+                  <img
+                    src="https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg="
+                    alt=""
+                    className="rounded-lg shadow-xl"
+                  />
                 </div>
               </Link>
             </>

@@ -1,22 +1,39 @@
 import React from "react";
-import Sidebar from "../../Admin/components/Sidebar";
-import styles from "../../styles/admin/Community.module.css";
+import Sidebar from "../.././../Admin/components/Sidebar";
+import styles from "../.././../styles/admin/Learn.module.css";
+import Link from 'next/link'
 
 import { useSelector } from "react-redux";
-import { userState } from "../../redux/features/authSlice";
-
-const Community = () => {
+import { userState } from "../.././../redux/features/authSlice";
+const Index = () => {
   const user = useSelector(userState);
   if (!user?.user?.isAdmin) return null;
+
+  const [learn, setLearn] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+  const [addEvent, setAddEvent] = React.useState(false);
+
+  const addeventhandler = () => {
+    setAddEvent(true);
+  };
+
+  const closeeventhandler = () => {
+    setAddEvent(false);
+  };
+
+  addEvent && console.log("add event");
+
   return (
     <div className={styles.wrapper}>
       <div>
         <Sidebar />
       </div>
       <div className="px-10 ">
-        <h1 className="flex justify-center text-center py-3 ">Community </h1>
+      <h1 className="font-semibold text-4xl p-3">Community</h1>
+      <hr />
+
         <div>
-          <h1 className="text-bold text-2xl">EVENT/ COURSES</h1>
+          <h1 className="text-bold ">EVENT/ COURSES</h1>
           <div className="flex flex-col ">
             <div className="gap-3 flex flex-row py-4">
               <input
@@ -84,13 +101,8 @@ const Community = () => {
               </button>
             </div>
           </div>
-          <div className="gap-3 flex flex-row justify-center">
-            <button
-              onClick={() => addEvent()}
-              className="bg-gray-400 px-1 py-2 rounded-lg"
-            >
-              Add Event
-            </button>
+          <div>
+           <Link href="./community/add" > Add Event</Link>
           </div>
         </div>
       </div>
@@ -98,4 +110,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default Index;

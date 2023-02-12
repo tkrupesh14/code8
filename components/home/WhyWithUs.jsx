@@ -6,12 +6,12 @@ const WhyWithUs = () => {
   return (
     <div className="2xl:mx-72 my-20">
       <p className="text-5xl font-semibold z-20 pb-2 text-center title">
-        Why build project with us?
+        Explore Our Programs
       </p>
 
       <div
         id="cards"
-        className="grid grid-cols-4 text-center mt-20 gap-x-5 gap-y-44 group relative"
+        className="grid grid-cols-4 text-center mt-20 pl-56 gap-x-5 gap-y-44 group relative"
       >
         <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 bottom-14"></div>
         <svg
@@ -126,7 +126,7 @@ const WhyWithUs = () => {
               cy="0"
               r="1"
               gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(32.0135 43.343) rotate(73.1167) scale(54.2715)"
+              gradientTransform="translate(32.0Project based experiential learning135 43.343) rotate(73.1167) scale(54.2715)"
             >
               <stop stop-color="white" />
               <stop offset="1" stop-color="white" stop-opacity="0" />
@@ -134,24 +134,18 @@ const WhyWithUs = () => {
           </defs>
         </svg>
         <WhyWithUsCard
-          title="Community led learning programs"
-          content="Learn with the community and start building from day1 with our best curated resources."
+          title="Project based experiential learning"
+          content="Our build program offers project-based learning opportunities in most industry-relevant tech stacks. It helps you hone your skills and let you validate your skills with our industry-standard certification."
         />
         <WhyWithUsCard
-          title="24x7 community supports"
-          content="Discuss and Collab with likemind and experts from our community to
-          build projects."
+          title="Learn what makes you truly industry ready"
+          content="We offer a wide range of cohort-based learning courses, which helps you gain extra edge on your learning with project-based experiential learning advantage."
         />
         <WhyWithUsCard
-          title="Best in class curated projects."
-          content="Our projects and curriculum help you achieve industry standard
-          skills and experience."
+          title="Learn on the go"
+          content="Community-driven peer-to-peer learning ecosystem Where you learn among peers from different colleges, share skills, collaborate on projects. Our events, boot camps, and workshops keep you all updated with the latest learning trends"
         />
-        <WhyWithUsCard
-          title="Earn skill badges and certificates."
-          content="Earn our badges and certificates that help you land internships,
-          projects and jobs."
-        />
+        
       </div>
     </div>
   );

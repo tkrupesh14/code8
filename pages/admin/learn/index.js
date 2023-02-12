@@ -1,10 +1,11 @@
 import React from "react";
-import Sidebar from "../../Admin/components/Sidebar";
-import styles from "../../styles/admin/Learn.module.css";
+import Sidebar from "../.././../Admin/components/Sidebar";
+import styles from "../.././../styles/admin/Learn.module.css";
+import Link from 'next/link'
 
 import { useSelector } from "react-redux";
-import { userState } from "../../redux/features/authSlice";
-const Learn = () => {
+import { userState } from "../.././../redux/features/authSlice";
+const Index = () => {
   const user = useSelector(userState);
   if (!user?.user?.isAdmin) return null;
 
@@ -28,7 +29,8 @@ const Learn = () => {
         <Sidebar />
       </div>
       <div className="px-10 ">
-        <h1 className="flex justify-center text-center py-3 ">Learn </h1>
+      <h1 className="font-semibold text-4xl p-3">Learn</h1>
+      <hr />
         <div>
           <h1 className="text-bold ">EVENT/ COURSES</h1>
           <div className="flex flex-col ">
@@ -98,13 +100,8 @@ const Learn = () => {
               </button>
             </div>
           </div>
-          <div className="gap-3 flex flex-row justify-center">
-            <button
-              onClick={() => addEvent()}
-              className="bg-gray-400 px-1 py-2 rounded-lg"
-            >
-              Add Courses
-            </button>
+          <div>
+           <Link href="./learn/add" > Add Course</Link>
           </div>
         </div>
       </div>
@@ -112,4 +109,4 @@ const Learn = () => {
   );
 };
 
-export default Learn;
+export default Index;
