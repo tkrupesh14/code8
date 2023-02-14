@@ -85,7 +85,7 @@ const Eventgallery = () => {
     return (
         <div className={`${styles.Event_gallery}`}>
             <div>
-                <h1>
+                <h1 className="title text-5xl mb-10">
                     Event Gallery
                 </h1>
             </div>
