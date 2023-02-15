@@ -1,5 +1,7 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from '../styles/Aboutus.module.css'
+import aboutIMG from '../assets/images/about.png'
 
 const About = () => {
   return (
@@ -20,11 +22,7 @@ const About = () => {
         </div>
 
         <div className={styles.im1}>
-          <img
-            id="img-ab"
-            className={styles.im2}
-            src="https://github.com/KapadiaShubham/code8-media/blob/master/about-us/abo.png?raw=true"
-          ></img>
+          <Image src={aboutIMG}/>
         </div>
         </div>
     </div>   

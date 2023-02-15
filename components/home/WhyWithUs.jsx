@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import WhyWithUsCard from "./WhyWithUsCard";
 
-const WhyWithUs = () => {
+const WhyWithUs = (props) => {
+  const { Heading } = props
   return (
     <div className="2xl:mx-72 my-20">
       <p className="text-5xl font-semibold z-20 pb-2 text-center title">
-        Explore Our Programs
+      {Heading}
       </p>
 
       <div

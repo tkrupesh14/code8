@@ -3,18 +3,18 @@ import About from "../components/About";
 import WhatWhy from "../components/WhatWhy.jsx";
 import Whodrivesus from "../components/Whodrivesus.js";
 import Mentorstats from "../components/Mentorstats.js";
-import { Ouroffering } from '../components/home/Ouroffering';
+import WhyWithUs from "../components/home/WhyWithUs";
 
 
 const about = () => {
   return (
-    <div>
+    <div className="build bg-black text-white"> 
       {/* Who we are*/}
      
       <About/>
+      <WhyWithUs Heading="Why Choose Us?"/>
       <Whodrivesus/>
       <WhatWhy/>
-      <Ouroffering Heading={"Our offerings"}/>
       <Mentorstats/>
       
     </div>

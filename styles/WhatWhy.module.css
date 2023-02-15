@@ -14,8 +14,9 @@
     justify-content: space-around;
     font-size: 1rem;
     gap: 0.5rem;
+    border-radius: 20px;
     flex-wrap: wrap;
-    background-color: #e5fcff;
+    background-color: #000425;
     margin: 2rem auto;
 }
 

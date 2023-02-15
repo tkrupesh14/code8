@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
       <HeroSection {...homeObjOne} />
-      <WhyWithUs />
+      <WhyWithUs Heading = "Explore Our Programs"/>
       <Aboutcode8 />
       <Stats />
       <Mentorstats/>
