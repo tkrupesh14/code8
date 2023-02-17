@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../assets/images/code8.png'
+import Logo from '../assets/logo.png'
 import { FaInstagram, FaDiscord, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import styles from '../styles/Footer.module.css'
 const Footer = () => {
@@ -21,10 +21,10 @@ const Footer = () => {
                                     <input type="submit" value="Subscribe" className='p-2 m-2 text-white rounded-full bg-blue-600 cursor-pointer' />
                                 </form>
                             </div>
-                            <div class="flex mt-8 space-x-6 text-gray-600">
+                            <div class="flex mt-8 space-x-6 text-white">
 
                                 <a
-                                    className={styles.social__icon__link}
+                                    className="text-white text-xl"
                                     href="https://chat.whatsapp.com/Dy5uAVlpzFj3ent90TMjeW"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const Footer = () => {
                                     <FaWhatsapp />
                                 </a>
                                 <a
-                                    className={styles.social__icon__link}
+                                    className="text-white text-xl"
                                     href="https://instagram.com/codeate.in?igshid=YmMyMTA2M2Y="
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -43,7 +43,7 @@ const Footer = () => {
                                 </a>
 
                                 <a
-                                    className={styles.social__icon__link}
+                                    className="text-white text-xl"
                                     href="http://dsc.gg/code8"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -53,7 +53,7 @@ const Footer = () => {
                                 </a>
 
                                 <a
-                                    className={styles.social__icon__link}
+                                    className="text-white text-xl"
                                     href="https://www.linkedin.com/company/code8-connect"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -65,7 +65,7 @@ const Footer = () => {
                         </div>
                         <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
                             <div>
-                                <p class="font-medium">
+                                <p class="font-medium text-white">
                                     Company
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
@@ -76,7 +76,7 @@ const Footer = () => {
                                 </nav>
                             </div>
                             <div>
-                                <p class="font-medium">
+                                <p class="font-medium text-white">
                                     Services
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
@@ -88,7 +88,7 @@ const Footer = () => {
                                 </nav>
                             </div>
                             <div>
-                                <p class="font-medium">
+                                <p class="font-medium text-white">
                                     Helpful Links
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
@@ -98,7 +98,7 @@ const Footer = () => {
                                 </nav>
                             </div>
                             <div>
-                                <p class="font-medium">
+                                <p class="font-medium text-white">
                                     Legal
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
@@ -110,7 +110,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <p class="mt-8 text-xs text-gray-800">
+                    <p class="mt-8 text-xs text-white">
                         © 2023 Code8
                     </p>
                 </div>

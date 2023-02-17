@@ -12,7 +12,7 @@ import Stats from "../components/home/Stats";
 
 export default function Courses() {
   return (
-    <>
+    <> 
       <div className={`${styles.learnPage}`}>
         <div className={`${styles.learn_grid_container}`}>
           <div className={`${styles.grid_item} ${styles.learn_content}`}>

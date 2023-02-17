@@ -5,6 +5,7 @@ import SAP from '../components/community/SAP'
 import styles from '../styles/home/Community.module.css'
 import Features from '../components/Features/Features'
 import Mentorstats from '../components/Mentorstats'
+import WorkshopsCard from '../components/community/WorkshopsCard'
 // import styles from '../styles/home/OurCommunity.module.css'
 // import BuiltTop from '../components/community/BuiltTop'
 // import EventsDiv from '../components/community/EventsDiv'
@@ -13,14 +14,14 @@ import Mentorstats from '../components/Mentorstats'
 
 const community = () => {
   return (
-    <div className={`${styles.community}`}>
+    <div className="bg-black text-white">
       {/* Join Us
       <BuiltTop /> */}
 
       <SAP />
 
       <MobileSAP />
-      
+      <WorkshopsCard Heading="Our Workshops"/>
       <Features />
 
       {/* <EventsDiv/> */}

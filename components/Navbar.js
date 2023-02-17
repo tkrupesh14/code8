@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./button/Button";
 import Link from "next/link";
-
+import Image from "next/image";
+import logoWhite from "../assets/logo_white.png";
 import styles from "../styles/Navbar.module.css";
 import {
   Alert,
@@ -188,7 +189,7 @@ export const Navbar = () => {
 
         <Link href="/">
           <div className={``} onClick={closeMobileMenu1}>
-            <img src="/images/code8.png" alt="code8-logo" className={``}></img>
+            <Image src={logoWhite} width="130px" height="65px"/>
           </div>
         </Link>
 
