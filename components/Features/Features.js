@@ -1,43 +1,63 @@
-import styles from "../../styles/Features.module.css"
+import styles from '../../styles/WorkshopsCard.module.css'
+
+import { motion } from "framer-motion";
+
+const Card = (props) => {
+  return (
+      // <div className={`${styles.w__card} ${props.index===0? "":`${styles.not__first__card}`}`} id="im3">
+      //     <Image src={props.imgLink} alt="ima" width={100} height={100}/>
+      //     <div className={styles.w__reason}>{props.title}</div>
+      //     <div className={styles.w__card__content}>
+      //         {props.content}
+      //     </div>
+      // </div>
+      <>
+       <div>
+      <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 bottom-14 opacity-20"></div>
+      <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 left-1 bottom-2 opacity-20"></div>
+     
+       <motion.div
+       whileHover={{ scale: 1.1 }}
+       whileTap={{ scale: 0.9 }}
+       className="w-56 h-56 bg-clip-padding backdrop-filter px-6 py-4 backdrop-blur-xl bg-opacity-60 border border-white/10 bg-gradient-to-tl to-amber-800/10 group duration-500 rounded-3xl card-animation hover:border-black/80 via-slate-900 from-black/10"
+     >
+     {/* <Image src={props.imgLink} alt="ima" width={100} height={100}/> */}
+      
+       <div className="mb-5 text-xl text-center">{props.content}</div>
+     </motion.div>
+     </div>
+     </>
+  )
+}
+const data = [
+  {
+      title: "Workshop 1",
+      content: "Industry relevant cohort based learning"
+  },
+  {
+      title: "Workshop 2",
+      content:"Experiential and project based approach"
+  },
+  {
+    title: "Workshop 3",
+      content: "skill based learning"
+  },
+  {
+    title: "Workshop 4",
+      content: "Mentors who have made it already"
+  }
+]
 const Features = () => {
   return (
-    
     <div>
-      <div className="grid grid-cols-4 text-left my-10 gap-10 place-content-around mx-32">
-        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border border-white/20 to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:scale-105 group duration-500 rounded-3xl">
-
-
-          <div className="mb-5 text-2xl duration-500 text-center">
-            Industry relevant cohort based learning
-          </div>
-
-        </div>
-        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border border-white/20 to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:scale-105 group duration-500 rounded-3xl">
-
-
-          <div className="mb-5 text-2xl duration-500 text-center">
-            Experiential and project based approach
-          </div>
-
-        </div>
-        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border border-white/20 to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:scale-105 group duration-500 rounded-3xl">
-
-
-          <div className="mb-5 text-2xl duration-500 text-center">
-           We provide you Skill based learning
-          </div>
-
-        </div>
-        <div className="bg-clip-padding backdrop-filter px-10 py-6 backdrop-blur-xl bg-opacity-60 border border-white/20 to-black bg-gradient-to-tl  from-white/10 hover:rotate-1 hover:scale-105 group duration-500 rounded-3xl">
-
-
-          <div className="mb-5 text-2xl duration-500 text-center">
-          Mentors who have made it already
-          </div>
-
-        </div>
-      </div>
      
+      <div className={styles.Whatdrivesus}>
+            <div className={styles.w__card__holder}>
+                {data.map((item, index) => {
+                    return <Card key={index} index={index} title={item.title} imgLink={item.imgLink} content={item.content} />
+                })}
+            </div>
+        </div>
     </div>
 
 

@@ -32,4 +32,7 @@
         height: auto;
         width: 95%;
     }
+    .buildmain{
+        display: none;
+    }
 }

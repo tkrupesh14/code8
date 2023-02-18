@@ -46,7 +46,7 @@ const Howitworks = () => {
     //   </div>
     // </div>
     <div className="text-center relative">
-      <h1 className="title text-6xl font-semibold">How it works</h1>
+      <h1 className="title text-3xl font-semibold">How it works</h1>
       <p className="text-white/10 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
         WORKS
       </p>

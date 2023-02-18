@@ -5,7 +5,7 @@ import styles from "../../styles/Build/Whatisbuild.module.css";
 const Whatisbuild = () => {
   return (
     <div className="py-10 text-center">
-      <div className="">
+      <div className={`${styles.buildmain}`}>
         <div className="">
           <div className="text-7xl font-bold text-blue-500 drop-shadow shadow-yellow-500 max-w-5xl mx-auto leading-snug title">
             Master your skill, <br /> one project at a time !
