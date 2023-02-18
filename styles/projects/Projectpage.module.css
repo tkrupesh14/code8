@@ -51,6 +51,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
+    padding-bottom: 40px;
 }
 
 .Categories h1{

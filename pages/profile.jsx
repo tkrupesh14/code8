@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetEnrolledProjectsQuery } from "../redux/features/allSlice";
 import { logout, userState } from "../redux/features/authSlice";
+import { motion } from "framer-motion";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -25,13 +26,13 @@ const Profile = () => {
 
   if (user)
     return (
-      <div>
-        <section className="pt-5 bg-blueGray-50">
+      <div className="bg-black text-white">
+        <section className="pt-5">
           <div className="w-full lg:w-4/12 px-4 mx-auto">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-16">
-              <div className="px-6">
-                <div className="flex flex-wrap justify-center">
-                  <div className="w-full px-4 flex justify-center">
+            <div className="relative bg-gray-700 rounded-2xl flex flex-col min-w-0 break-words bg-white w-full mb-6 pb-10 shadow-xl rounded-lg mt-16">
+              <div className="px-6 ">
+                <div className="flex flex-wrap justify-center ">
+                  <div className="w-full p-4 flex justify-center">
                     <div className="relative z-10 w-56 h-56 text-center mx-auto">
                       <img
                         alt="Image"
@@ -81,24 +82,7 @@ const Profile = () => {
                     University of Computer Science
                   </div>
                 </div>
-                <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
-                  <div className="flex flex-wrap justify-center">
-                    {allEnrolledProjects?.data?.projects?.length > 0 && (
-                      <h1 className="text-2xl font-semibold mb-5">
-                        Enrolled Projects
-                      </h1>
-                    )}
-
-                    <div className="w-full lg:w-10/12 px-4 ">
-                      {allEnrolledProjects?.data?.projects?.map((project) => (
-                        <p
-                          key={project._id}
-                          className="mb-4 text-lg leading-relaxed text-blueGray-700"
-                        >
-                          {project.projectId.title} : {project.projectId.level}
-                        </p>
-                      ))}
-                      <div className="flex items-center justify-evenly">
+                <div className="flex items-center justify-evenly">
                         {user?.user?.isAdmin && (
                           <button
                             onClick={() => {
@@ -156,13 +140,43 @@ const Profile = () => {
                           </span>
                         </button>
                       </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </section>
+        <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
+                  <div className="flex flex-col justify-center">
+                    {allEnrolledProjects?.data?.projects?.length > 0 && (
+                      <h1 className="text-2xl font-semibold mb-5">
+                        Enrolled Projects
+                      </h1>
+                    )}
+                    <div className="m-10">
+          <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 bottom-14 opacity-20"></div>
+          <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 left-1 bottom-2 opacity-20"></div>
+         
+           <motion.div
+           whileHover={{ scale: 1.1 }}
+           whileTap={{ scale: 0.9 }}
+           className="bg-clip-padding  backdrop-filter px-6 py-4 backdrop-blur-xl bg-opacity-60 border border-white/10 bg-gradient-to-tl to-amber-800/10 group duration-500 rounded-3xl card-animation hover:border-black/80 via-slate-900 from-black/10"
+         >
+         {/* <Image src={props.imgLink} alt="ima" width={100} height={100}/> */}
+          
+           <div className="mb-5 text-center">
+           {allEnrolledProjects?.data?.projects?.map((project) => (
+                        <p
+                          key={project._id}
+                          className="mb-4 text-lg leading-relaxed text-blueGray-700"
+                        >
+                          {project.projectId.title} : {project.projectId.level}
+                        </p>
+                      ))}
+           </div>
+         </motion.div>
+         </div>
+                    
+                  </div>
+                </div>
       </div>
     );
   else {

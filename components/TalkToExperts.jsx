@@ -13,7 +13,7 @@ const TalkToExperts = () => {
           totam eius quaerat consequuntur libero sapiente impedit voluptate
           debitis quibusdam. Vero, dolorem.
         </div>
-        <button className="Contactus-button">
+        <button className="rounded-full bg-blue-600 p-2 transition-all hover:text-xl ">
           Contact Us <i className="fa-solid fa-chevron-right"></i>
         </button>
       </div>

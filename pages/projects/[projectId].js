@@ -107,12 +107,13 @@ const projectdesc = () => {
 
   if (!user) return null;
   return (
+    <div className="bg-black text-white">
     <div>
       <div>
         {/* <div>{data?.project?.title}</div> */}
         <div>
           {/* <button onClick={handleShareOnLinkedin}>Write LinkedIn Post</button> */}
-          <div data-color-mode="light" className="max-w-4xl mx-auto my-10">
+          <div data-color-mode="dark" className="max-w-4xl mx-auto pt-10">
             <Markdown
               className="rounded-lg border shadow-lg py-5 px-10"
               source={data?.project?.description}
@@ -120,7 +121,7 @@ const projectdesc = () => {
           </div>
         </div>
 
-        <div className="text-center mt-5 mb-32">
+        <div className="text-center mt-5 pb-32">
           {!allEnrolledProjects.data?.projects?.find(
             (p) => p.projectId._id == projectId
           ) ? (
@@ -174,7 +175,7 @@ const projectdesc = () => {
                   name="githubLink"
                   placeholder="Github Link"
                   type="text"
-                  className="bg-transparent w-72 border rounded-full py-3 px-5 border-black/50"
+                  className="bg-transparent w-72 border rounded-full py-3 px-5 border-white/50"
                   onChange={handleSubmitChange}
                 />
               </div>
@@ -184,7 +185,7 @@ const projectdesc = () => {
                   name="deployedLink"
                   placeholder="Deployed Link"
                   type="text"
-                  className="bg-transparent w-72 border rounded-full py-3 px-5 border-black/50"
+                  className="bg-transparent w-72 border rounded-full py-3 px-5 border-white/50"
                   onChange={handleSubmitChange}
                 />
               </div>
@@ -246,6 +247,7 @@ const projectdesc = () => {
           {msg.message}
         </Alert>
       </Snackbar>
+    </div>
     </div>
   );
 };

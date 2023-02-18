@@ -9,6 +9,7 @@ const Projectpage = () => {
     allProjects.refetch();
   }, []);
   return (
+    <div className="bg-black text-white">
     <div className={`${styles.Projectpage}`}>
       <div className={`${styles.proj_head}`}>
         <div className={`${styles.proj_intro}`}>
@@ -54,6 +55,7 @@ const Projectpage = () => {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 };

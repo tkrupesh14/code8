@@ -12,7 +12,7 @@ const Projectcat = () => {
   // const level = urlquery.get("level");
 
   return (
-    <div className="Projectcat">
+    <div className="Projectcat bg-black text-white">
       <div className="Projectcat-head">
         <div className="Projectheadleft">
           <h1>Introducing Code8 Project Hub</h1>
@@ -21,13 +21,13 @@ const Projectcat = () => {
             sint, reprehenderit ex quidem repellendus dicta voluptatum nemo at
             ducimus exercitationem, dolor quasi libero laboriosam impedit?
           </div>
-          <div className="Search-project">
+          <div className="Search-project rounded-full">
             <span>
               <i className="fa-solid fa-magnifying-glass"></i>
             </span>
             <input
               type="text"
-              className="bg-transparent"
+              className="bg-transparent "
               placeholder="Search"
             />
           </div>
@@ -63,7 +63,7 @@ const Projectcat = () => {
         </div>
       </div>
       <TalkToExperts />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 };
