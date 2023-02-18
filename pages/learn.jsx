@@ -17,7 +17,8 @@ export default function Courses() {
     <> 
       <div className="bg-black text-white">
         <SAP/>
-        <MobileSAP />
+        <MobileSAP heading="Learn, Build & Collabroate" description="Learn on the go with diverse community of techies and get ahead in your career.
+We have created a cultured community of techies for you to leverage peer to peer learning, collaboration and help." button="Join Our Community"/>
       <Features2 />
 
       {/* Courses */}

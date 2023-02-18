@@ -102,6 +102,9 @@
 }
 
 @media screen and (max-width: 790px) {
+  .home__hero_section{
+    display: none;
+  }
   .home__hero_text_wrapper {
     padding-bottom: 65px;
   }

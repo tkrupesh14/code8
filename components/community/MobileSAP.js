@@ -5,20 +5,16 @@ import Image from 'next/image'
 import learn from '../../assets/images/Learn.jpeg'
 import { motion } from "framer-motion";
 
-export default function MobileSAP () {
+export default function MobileSAP (props) {
+  const {heading, description, button} = props
   return (
     <div className={`${styles.mobile_sap}`}>
       <div>
-        <h1 className={`${styles.community_h1}`}>Learn, build and collaborate.</h1>
+        <h1 className={`${styles.community_h1}`}>{heading}</h1>
         <div className={`${styles.community_aboutpg}`}>
           <div className="pb-10"></div>
           <p>
-            Learn on the go with diverse community of techies and get ahead in
-            your career.
-          </p>
-          <p>
-            We have created a cultured community of techies for you to leverage
-            peer to peer learning, collaboration and help.
+            {description}
           </p>
         </div>
         {/* <Button buttonSize="btn--large" buttonColor="blue">
@@ -71,7 +67,7 @@ export default function MobileSAP () {
                         </svg>
                       </span>
                       <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
-                        Join Our Community
+                        {button}
                       </span>
                     </motion.div>
                   </a>

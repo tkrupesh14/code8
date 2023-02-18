@@ -22,6 +22,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, userState } from "../redux/features/authSlice";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 export const Navbar = () => {
   const user = useSelector(userState);
@@ -171,7 +172,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className={`bg-gradient-to-tr to-violet-500 from-violet-500`}>
+    <div className={`bg-gradient-to-tr to-violet-500 from-violet-500 `}>
       <nav className={`flex justify-between px-10 py-2`}>
         <Snackbar
           open={openAlert}
@@ -194,7 +195,9 @@ export const Navbar = () => {
         </Link>
 
         <div className={`${styles.menu_icon}`} onClick={handleClick1}>
-          <div className={click1 ? "fas fa-times" : "fas fa-bars"} />
+          {/* <p className={click1 ? "fas fa-times z-20" : "fas fa-bars bg-transparent"} /> */}
+          <AiOutlineMenu className={click1 ? "hidden" : "block text-white m-4"} />
+          <AiOutlineClose className={click1 ? "block text-white m-4" : "hidden "} />
         </div>
 
         {/* <div className={`${styles.menu_c}`}> */}
