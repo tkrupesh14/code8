@@ -4,6 +4,9 @@
     justify-content: center;
     width: 50%;
 }
+.main_sap{
+    display: block;
+}
 
 .community_join_button {
     display: flex;
@@ -124,6 +127,9 @@
 }
 
 @media only screen and (max-width: 790px) {
+    .main_sap{
+        display: none;
+    }
     .community .builttop {
         /* padding: 50px 80px; */
         height: 20rem;
@@ -184,4 +190,5 @@
     .mobile_sap div:last-child {
         margin-top: 0;
     }
+   
 }

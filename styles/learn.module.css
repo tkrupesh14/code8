@@ -216,7 +216,6 @@
   align-content: center;
   padding: 30px;
   align-items: center;
-  margin-bottom: 70px;
 }
 .stats2_information {
   width: 100%;
@@ -229,6 +228,8 @@
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 2rem;
+  margin-top: 13rem;
+  margin-bottom: 20px;
 }
 
 .information {
@@ -270,6 +271,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .coursepg {
@@ -401,7 +403,8 @@
 @media only screen and (min-width: 791px) {
   .bg_built_nextpro {
     margin-top: 70px;
-    background-color: rgba(25, 120, 165, 0.7);
+    margin-bottom: 70px;
+    background-color: #8E7AF6;
     padding-bottom: 2rem;
   }
 }

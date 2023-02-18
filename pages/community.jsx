@@ -6,6 +6,7 @@ import styles from '../styles/home/Community.module.css'
 import Features from '../components/Features/Features'
 import Mentorstats from '../components/Mentorstats'
 import WorkshopsCard from '../components/community/WorkshopsCard'
+import Mentors from '../components/community/mentors'
 // import styles from '../styles/home/OurCommunity.module.css'
 // import BuiltTop from '../components/community/BuiltTop'
 // import EventsDiv from '../components/community/EventsDiv'
@@ -21,8 +22,9 @@ const community = () => {
       <SAP />
 
       <MobileSAP />
-      <WorkshopsCard Heading="Our Workshops"/>
       <Features />
+      <Mentors Heading = "Our Mentors" />
+      <WorkshopsCard Heading="Our Workshops"/>
 
       {/* <EventsDiv/> */}
 

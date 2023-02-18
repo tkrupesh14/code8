@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import HeroSection from "../components/home/HeroSection";
 import { Ouroffering } from "../components/home/Ouroffering";
 import { homeObjOne } from "../data/HomeData";
-import Aboutcode8 from "../components/home/Aboutcode8";
+import AboutUs from "../components/AboutUs";
 import Ourreach from "../components/home/Ourreach";
 import OurPartners from "../components/home/OurPartners";
 import Ourcommunity from "../components/home/OurCommunity";
@@ -19,12 +19,11 @@ export default function Home() {
     <div className="bg-black text-white">
       <HeroSection {...homeObjOne} />
       <WhyWithUs Heading = "Explore Our Programs"/>
-      <Aboutcode8 />
+      <AboutUs Heading="About Us" SideHeading="ABOUT"/>
       <Stats />
       <Mentorstats/>
       <Testimonial />
       <Eventgallery />
-      <Stats/>
       <Ourcommunity />
     </div>
   );
