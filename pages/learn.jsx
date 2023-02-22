@@ -45,16 +45,15 @@ We have created a cultured community of techies for you to leverage peer to peer
       <div className={`${styles.s2_hello}`}>
         <div className={`${styles.stats2_information}`}>
           <Stats />
-          <div className={`${styles.mentor_text_info}`}>
-            <h3>
-              The learning you need, the skills you want, the career you
-              deserve.
-            </h3>
-            <br></br>
-            <div className={`${styles.register_now}`}>
-              Register now and get notify for our upcoming courses.
-              <br />
-              <div className='mx-10'>
+          
+        </div>
+        <div className="">
+        <div className={`${styles.mentor_text_info}`}>
+    
+      <p className="max-w-3xl mx-auto mt-5">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis atque, labore optio architecto officia nemo excepturi quam voluptas ex dicta natus? Quam minima reiciendis quo autem, deserunt molestiae delectus voluptatibus.
+      </p>
+              <div className='mt-10'>
               <a href='#'>
                     <motion.div
                       className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-black group"
@@ -107,7 +106,6 @@ We have created a cultured community of techies for you to leverage peer to peer
                     </motion.div>
                   </a>
                   </div>
-            </div>
           </div>
         </div>
       </div>

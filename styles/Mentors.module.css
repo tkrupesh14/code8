@@ -1,7 +1,7 @@
 .Whatdrivesus{
     width: 100vw;
     font-family: 'Roboto', sans-serif;
-    margin: 10vh 0;
+    margin: 1px 0;
 }
 .w__card__holder{
     position: relative;
@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     grid-gap: 2rem 0;
-    gap:2rem 0;
+    gap:1rem 0;
     align-items: center;
     justify-content: space-evenly;
     padding: 0px 10px;

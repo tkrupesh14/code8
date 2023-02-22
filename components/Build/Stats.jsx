@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import React from "react";
 import styles from "../../styles/Build/Stats.module.css";
 
-const Stats = () => {
+const Stats = (props) => {
+  const { Heading } = props;
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -10,7 +11,9 @@ const Stats = () => {
       viewport={{ once: true }}
       className="z-10 mt-20 pb-20"
     >
-      <div className="title text-5xl mb-10">Our Mentors Works At</div>
+      <p className="text-4xl font-semibold z-20 mt-10 text-center title">
+        {Heading}
+        </p>
       <motion.div
         initial={{ x: -100, opacity: 0.5 }}
         whileInView={{ x: 0, opacity: 1 }}

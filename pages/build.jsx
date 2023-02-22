@@ -19,8 +19,8 @@ const build = () => {
       {/* <Writtinghelloworld /> */}
       <WhyWithUs />
       <Howitworks />
-      <Findnexproject />
-      <Stats />
+      <Findnexproject Heading="Choose Project"/>
+      <Stats Heading="Mentors Works At"/>
       {/* <Buildbycode /> */}
     </div>
   );

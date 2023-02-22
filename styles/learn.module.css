@@ -225,10 +225,11 @@
   padding: 2rem 5rem;
   font-family: Poppins;
   font-style: normal;
+  text-align: center;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 2rem;
-  margin-top: 13rem;
+  margin-top: 1rem;
   margin-bottom: 20px;
 }
 

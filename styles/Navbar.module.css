@@ -176,7 +176,8 @@
   }
 
   .active {
-    background: #1fbfb8;
+    background: #089ee8;
+;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
