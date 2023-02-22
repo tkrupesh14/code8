@@ -172,7 +172,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className={`bg-gradient-to-tr to-violet-500 from-violet-500 `}>
+    <div className={`bg-blue-400 `}>
       <nav className={`flex justify-between px-10 py-2`}>
         <Snackbar
           open={openAlert}

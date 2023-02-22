@@ -88,7 +88,7 @@ const Testimonial = () => {
   return (
     <div className={`${styles.Testimonial}`}>
       <div className={`${styles.Testimonial_head}`}>
-        <h1 className="title text-5xl mb-10">Testimonials</h1>
+        <h1 className="title text-5xl my-10">Testimonials</h1>
       </div>
       <h2>Some amazing experiences from techies around.</h2>
       <div className={`${styles.Testimonial_holder}`}>

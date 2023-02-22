@@ -19,35 +19,35 @@ const Mentorstats = () => {
         <div className={`${styles.m__stat__block}`}>
           <Image src={Reach} alt=""/>
           <div>
-          <div className={styles.MSdata}>50+ </div>
+          <div className={styles.MSdata}>150+ </div>
           <div className={styles.MSmetadata}>Colleges</div>
           </div>
         </div>
         <div className={`${styles.m__stat__block}`}>
         <Image src={Reach1} alt=""/>
         <div>
-          <div className={styles.MSdata}>2K+</div>
+          <div className={styles.MSdata}>5K+</div>
           <div className={styles.MSmetadata}>Community members</div>
         </div>
         </div>
         <div className={`${styles.m__stat__block}`}>
         <Image src={Reach2} alt=""/>
           <div>
-          <div className={styles.MSdata}>500+</div>
+          <div className={styles.MSdata}>1000+</div>
           <div className={styles.MSmetadata}>Opportunities created</div>
           </div>
         </div>
         <div className={`${styles.m__stat__block}`}>
         <Image src={Reach3} alt=""/>
           <div>
-          <div className={styles.MSdata}>50+</div>
+          <div className={styles.MSdata}>100+</div>
           <div className={styles.MSmetadata}>Projects Build</div>
           </div>
         </div>
         <div className={`${styles.m__stat__block}`}>
         <Image src={Reach4} alt=""/>
         <div>
-          <div className={styles.MSdata}>10+</div>
+          <div className={styles.MSdata}>30+</div>
           <div className={styles.MSmetadata}>Companies and Partners</div>
         </div>
         </div>

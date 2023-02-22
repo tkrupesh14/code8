@@ -1,9 +1,11 @@
 import React from "react";
 // import { Button } from '../../Button';
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../../styles/home/HeroSection.module.css";
 import { Button } from "../button/Button.js";
 import { motion } from "framer-motion";
+import HeroImg from "../../assets/images/home/hero.png";
 
 function HeroSection({
   topLine,
@@ -35,7 +37,7 @@ function HeroSection({
                     <motion.div
                       className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-black group"
                       style={{
-                        boxShadow: "0px 4px 20px #543eff99",
+                        boxShadow: "0px 4px 20px #55CAFA",
                       }}
                       whileHover={{ scale: 1.1, x: 10 }}
                       transition={{
@@ -87,11 +89,7 @@ function HeroSection({
             </div>
             <div className={`${styles.col}`}>
               <div className={`${styles.home__hero_img_wrapper}`}>
-                <img
-                  src={img}
-                  alt={alt}
-                  className={`${styles.home__hero_img}`}
-                />
+                <Image src={HeroImg} width="500px" height="500px" />
               </div>
             </div>
           </div>
