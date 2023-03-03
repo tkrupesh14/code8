@@ -51,12 +51,12 @@ const AboutUs = (props) => {
       <p className="text-white/10 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
         {SideHeading}
       </p>
-      <p className="max-w-3xl mx-auto mt-5">
+      <p className="max-w-3xl mx-auto px-10 mt-5">
       Enabling community led peer to peer learning like never before.. <br/>
       Code8 is an experiential learning platform driven by the energy of code and ideas to harness the power of innovation in learners. We are building a culture to work on projects while getting upskilled with industry-relevant learnings and experience.
       </p>
 
-      <div className="max-w-4xl mx-auto mt-20">
+      <div className="max-w-4xl mx-auto px-10 mt-20">
         <ol class="relative border-l border-white/30 drop-shadow-xl shadow-orange-300 space-y-16">
           <li class="mb-10 ml-6 group ">
             <span class="absolute flex items-center justify-center w-10 duration-300 group-hover:scale-150 aspect-square group-hover:shadow-xl group-hover:shadow-purple-200 bg-blue-200 rounded-full -left-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800">

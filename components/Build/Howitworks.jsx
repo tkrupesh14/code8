@@ -50,7 +50,7 @@ const Howitworks = () => {
       <p className="text-white/10 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
         WORKS
       </p>
-      <p className="max-w-3xl mx-auto mt-5">
+      <p className="max-w-3xl  mx-auto mt-5">
         We have curated the best possible ecosystem to build projects and get
         upskill on the go. Our community is a blend of industry experts and
         students along with our curriculum helps you achieve your upskilling
