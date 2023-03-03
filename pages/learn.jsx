@@ -23,17 +23,17 @@ We have created a cultured community of techies for you to leverage peer to peer
 
       {/* Courses */}
 
-      <div className={`${styles.bg_built_nextpro} ${styles.explore_courses}`} style={{background:'#8E7AF6'}}>
+      {/* <div className={`${styles.bg_built_nextpro} ${styles.explore_courses}`} style={{background:'#8E7AF6'}}>
         <h1 className={`${styles.build_head} ${styles.learn_bh}`}>
           Explore Courses
         </h1>
 
         <p>Explore a wide range of courses!!</p>
 
-        {/* <Cards/> */}
+        
 
         <div id={`${styles.testbutton}`}></div>
-      </div>
+      </div> */}
       <AboutUs Heading="How it works?" SideHeading="WORKS"/>
 
       {/* Why Code8 */}

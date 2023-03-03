@@ -60,7 +60,7 @@ const Stats = () => {
               width='160'
               height='100'
             />
-            <div className={styles.stats_datatype}>TCS</div>
+            <div className={styles.stats_datatype}>ACC</div>
           </div>
         </motion.div>
         <motion.div whileHover={{ scale: 1.1 }} className={styles.stats_block}>

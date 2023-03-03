@@ -172,7 +172,9 @@ export const Navbar = () => {
   };
 
   return (
-    <div className={`bg-blue-400 `}>
+    <>
+  
+    <div className='bg-black  bg-opacity-60 bg-gradient-to-tl to-amber-800/10 group duration-500 card-animation hover:border-black/80 via-slate-600 from-black/10'>
       <nav className={`flex justify-between px-10 py-2`}>
         <Snackbar
           open={openAlert}
@@ -206,27 +208,7 @@ export const Navbar = () => {
             click1 ? styles.active : styles.hidden
           }`}
         >
-          <motion.li
-            whileHover={{ scale: 1.02 }}
-            className={`${styles.nav_item}`}
-          >
-            <Link href="/">
-              <div className={`${styles.nav_links}`} onClick={closeMobileMenu1}>
-                Home
-              </div>
-            </Link>
-          </motion.li>
-
-          <motion.li
-            whileHover={{ scale: 1.02 }}
-            className={`${styles.nav_item}`}
-          >
-            <Link href="/about">
-              <div className={`${styles.nav_links}`} onClick={closeMobileMenu1}>
-                About us
-              </div>
-            </Link>
-          </motion.li>
+          
 
           <motion.li
             whileHover={{ scale: 1.02 }}
@@ -709,5 +691,6 @@ export const Navbar = () => {
         <DialogActions></DialogActions>
       </Dialog>
     </div>
+    </>
   );
 };

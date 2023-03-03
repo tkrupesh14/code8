@@ -73,7 +73,7 @@
   align-items: center;
   height: 50px;
   width: max-content;
-
+  
   flex-direction: row;
   justify-content: space-between;
   gap: 25px;
@@ -144,7 +144,9 @@
   border-radius: 10px 10px 0px 0px;
   /* box-shadow: inset 10px 10px 10px #48c0fc; */
 }
-
+.navbar{
+  background: #00b7d5;
+}
 .navicons a {
   color: white;
   font-size: 1.7rem;
