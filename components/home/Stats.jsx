@@ -4,6 +4,10 @@ import styles from "../../styles/Build/Stats.module.css";
 
 const Stats = () => {
   return (
+    <>
+    <div className="w-60 h-60 blur-3xl bg-blue-400 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 bottom-14 opacity-20"></div>
+        <div className="w-60 h-60 blur-3xl bg-blue-400 rounded-fu
+        ll absolute group-hover:bg-blue-600 duration-1000 left-1 bottom-2 opacity-20"></div>
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -97,6 +101,7 @@ const Stats = () => {
         </motion.div>
       </motion.div>
     </motion.div>
+    </>
   );
 };
 

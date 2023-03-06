@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "../../styles/home/HeroSection.module.css";
 import { Button } from "../button/Button.js";
 import { motion } from "framer-motion";
-import HeroImg from "../../assets/images/home/hero.png";
+import HeroImg from "../../assets/images/home/Saly-19.png";
 
 function HeroSection({
   topLine,

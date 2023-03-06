@@ -7,7 +7,7 @@ import styles from '../styles/Footer.module.css'
 const Footer = () => {
     return (
         <>
-           <footer class="bg-gradient-to-r from-gray-900 to-gray-900">
+            <footer class="bg-gradient-to-r from-gray-900 to-gray-900">
                 <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
                         <div>
@@ -15,14 +15,7 @@ const Footer = () => {
                             <p class="max-w-xs mt-4 text-sm text-gray-600">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
                             </p>
-                            <div className="newsletter-footer-section mt-2">
-                                <form action="#" method="post">
-                                    <input type="email" name='newsletter-footer' id='newsletter-footer' className='bg-transparent border border-blue-600 rounded-full p-1 w-1/2 text-sm' placeholder='subscribe to newsletter' />
-                                    <input type="submit" value="Subscribe" className='p-2 m-2 text-white rounded-full bg-blue-600 cursor-pointer' />
-                                </form>
-                            </div>
                             <div class="flex mt-8 space-x-6 text-white">
-
                                 <a
                                     className="text-white text-xl"
                                     href="https://chat.whatsapp.com/Dy5uAVlpzFj3ent90TMjeW"
@@ -70,9 +63,8 @@ const Footer = () => {
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                                     <a class="hover:opacity-75" href> About </a>
-                                    <a class="hover:opacity-75" href> Meet the Team </a>
-                                    <a class="hover:opacity-75" href> History </a>
-                                    <a class="hover:opacity-75" href> Careers </a>
+                                    <a class="hover:opacity-75" href> Privacy Policy </a>
+                                    <a class="hover:opacity-75" href> Terms & Conditions </a>
                                 </nav>
                             </div>
                             <div>
@@ -80,11 +72,9 @@ const Footer = () => {
                                     Services
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                    <a class="hover:opacity-75" href> 1on1 Coaching </a>
-                                    <a class="hover:opacity-75" href> Company Review </a>
-                                    <a class="hover:opacity-75" href> Accounts Review </a>
-                                    <a class="hover:opacity-75" href> HR Consulting </a>
-                                    <a class="hover:opacity-75" href> SEO Optimisation </a>
+                                    <a class="hover:opacity-75" href> Build </a>
+                                    <a class="hover:opacity-75" href> Learn </a>
+                                    <a class="hover:opacity-75" href> Community </a>
                                 </nav>
                             </div>
                             <div>
@@ -92,21 +82,20 @@ const Footer = () => {
                                     Helpful Links
                                 </p>
                                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                    <a class="hover:opacity-75" href> Contact </a>
                                     <a class="hover:opacity-75" href> FAQs </a>
                                     <a class="hover:opacity-75" href> Live Chat </a>
                                 </nav>
                             </div>
                             <div>
                                 <p class="font-medium text-white">
-                                    Legal
+                                    Contact Us
+                                </p><br />
+                                <p>
+                                   <p className='font-medium text-white'> Email: </p> <a href="mailto:contact.us@codeate.in" class="text-gray-500">contact.us@codeate.in</a>
+                                </p><br />
+                                <p>
+                                   <p className='font-medium text-white'> Phone </p> <a href="dial:+919182567700" class="text-gray-500">+91 91825 67700</a>
                                 </p>
-                                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                                    <a class="hover:opacity-75" href> Privacy Policy </a>
-                                    <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
-                                    <a class="hover:opacity-75" href> Returns Policy </a>
-                                    <a class="hover:opacity-75" href> Accessibility </a>
-                                </nav>
                             </div>
                         </div>
                     </div>

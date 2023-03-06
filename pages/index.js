@@ -28,7 +28,6 @@ We have created a cultured community of techies for you to leverage peer to peer
       <Mentorstats/>
       <Testimonial />
       <Eventgallery />
-      <CommunityPartners />
       <Ourcommunity />
 
     </div>

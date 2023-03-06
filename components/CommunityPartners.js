@@ -18,6 +18,7 @@ import Chatrashala from '../assets/images/community-partners/chatrashala.jpeg'
 
 const Stats = () => {
   return (
+
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -163,6 +164,7 @@ const Stats = () => {
           <div className={styles.stats_datatype}>Chatrashala</div>
         </motion.div>
       </motion.div>
+    
     </motion.div>
   );
 };
