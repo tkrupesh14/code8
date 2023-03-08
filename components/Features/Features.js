@@ -1,5 +1,8 @@
 import styles from '../../styles/WorkshopsCard.module.css'
 import Icon1 from '../../assets/images/Saly-31.png'
+import Icon2 from '../../assets/images/Saly-32.png'
+import Icon3 from '../../assets/images/Saly-43.png'
+import Icon4 from '../../assets/images/Saly-16.png'
 import Image from 'next/image';
 import { motion } from "framer-motion";
 
@@ -40,17 +43,17 @@ const data = [
   },
   {
       title: "Workshop 2",
-      imgLink: Icon1,
+      imgLink: Icon2,
       content:"Experiential and project based approach"
   },
   {
     title: "Workshop 3",
-    imgLink: Icon1,
+    imgLink: Icon3,
       content: "skill based learning"
   },
   {
     title: "Workshop 4",
-    imgLink: Icon1,
+    imgLink: Icon4,
       content: "Mentors who have made it already"
   }
 ]

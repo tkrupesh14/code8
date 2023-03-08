@@ -1,5 +1,8 @@
 import styles from '../../styles/WorkshopsCard.module.css'
 import Icon1 from '../../assets/images/Saly-31.png'
+import Icon2 from '../../assets/images/Saly-32.png'
+import Icon3 from '../../assets/images/Saly-43.png'
+import Icon4 from '../../assets/images/Saly-16.png'
 import Image from 'next/image';
 import { motion } from "framer-motion";
 
@@ -42,15 +45,15 @@ const data = [
       content: "That keeps you ahead in career."
   },
   {
-    imgLink: Icon1,
+    imgLink: Icon2,
       content:"Specially designed to provide you with relevant experience and hands-on."
   },
   {
-    imgLink: Icon1,
+    imgLink: Icon3,
       content: "Take the community advantage to learn beyond classroom lectures."
   },
   {
-    imgLink: Icon1,
+    imgLink: Icon4,
       content: "Get your skills validated and become certified by industry professionals."
   }
 ]
