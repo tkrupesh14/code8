@@ -8,7 +8,7 @@ const Explorecategories = (props) => {
     <>
     <div>
         <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 bottom-14 opacity-20"></div>
-        <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 left-1 bottom-2 opacity-20"></div>
+        <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 left-1 top-4 opacity-20"></div>
        
          <motion.div
          whileHover={{ scale: 1.1 }}
@@ -28,9 +28,9 @@ const Explorecategories = (props) => {
         </Link>
       
       {props.options && (
-        <div className={`${styles.Category_operations}`}>
+        <div className={`${styles.Category_operations} `}>
           <Link href="/projects" className="cursor-pointer cat-option">
-          <p className="cursor-pointer">Expolore {props?.topic}</p>
+          <p className="cursor-pointer bg-blue-500 rounded-full text-center p-2">Expolore {props?.topic}</p>
           </Link>
           {/* <button className="cat-option 😁">
             Join the community <i className="fa-solid fa-arrow-right"></i>{" "}

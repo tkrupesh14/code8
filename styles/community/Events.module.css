@@ -1,0 +1,21 @@
+.item{
+   min-width: 30rem;
+    padding: 80px;
+}
+.item .img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+    pointer-events: none;
+}
+.inner_carosel{
+    display: flex;
+}
+.carosel{
+    cursor: grab;
+    overflow: hidden;
+    padding: 30px;
+    height: 500px;
+    background-color: #424242;
+
+}

@@ -2,11 +2,11 @@ import React from "react";
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Mentorstats.module.css'
-import Reach from '../assets/images/reach5.png'
-import Reach1 from '../assets/images/reach1.png'
-import Reach2 from '../assets/images/reach2.png'
-import Reach3 from '../assets/images/reach3.png'
-import Reach4 from '../assets/images/reach4.png'
+import Reach from '../assets/images/Saly-44.png'
+import Reach1 from '../assets/images/Saly-43.png'
+import Reach2 from '../assets/images/Saly-32.png'
+import Reach3 from '../assets/images/Saly-10.png'
+import Reach4 from '../assets/images/Saly-31.png'
 
 
 

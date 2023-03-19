@@ -6,7 +6,9 @@ import Stats from "../components/Build/Stats";
 import Whatisbuild from "../components/Build/Whatisbuild";
 import WhyWithUs from "../components/Build/WhyWithUs";
 import Writtinghelloworld from "../components/Build/Writtinghelloworld";
-import MobileSAP from "../components/community/MobileSAP";
+import dynamic from "next/dynamic";
+import Footer from "../components/Footer";
+
 
 const build = () => {
   return (
@@ -14,13 +16,13 @@ const build = () => {
      
 
       <Whatisbuild />
-      <MobileSAP heading=" Master your skill,one project at a time !" description="We have created a wide range of build programs where you can hone
-            your skill while working on projects." button="JStart Building Project"/>
       {/* <Writtinghelloworld /> */}
       <WhyWithUs />
       <Howitworks />
-      <Findnexproject Heading="Choose Project"/>
-      <Stats Heading="Mentors Works At"/>
+      <Findnexproject />
+      <Stats />
+     
+
       {/* <Buildbycode /> */}
     </div>
   );

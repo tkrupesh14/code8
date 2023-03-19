@@ -15,6 +15,7 @@ import Stats from "../components/home/Stats";
 import Mentorstats from "../components/Mentorstats";
 import MobileSAP from "../components/community/MobileSAP";
 import CommunityPartners from "../components/CommunityPartners";
+import Events from "../components/community/Events";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ We have created a cultured community of techies for you to leverage peer to peer
       <Stats />
       <Mentorstats/>
       <Testimonial />
-      <Eventgallery />
+      <Events/>
       <Ourcommunity />
 
     </div>

@@ -45,8 +45,7 @@ const Project = ({
   onDiscussClick,
 }) => (
   <div>
-  <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 right-5 -bottom-64 opacity-10"></div>
-  <div className="w-60 h-60 blur-3xl bg-blue-500 rounded-full absolute group-hover:bg-blue-600 duration-1000 left-5 -bottom-48 opacity-10"></div>
+
  
    <motion.div
    whileHover={{ scale: 1.1 }}
@@ -63,7 +62,7 @@ const Project = ({
   </Link>
   <div className="">
       <Link href={`projects/${id}`}>
-        <button className="px-4 py-2 hover:px-5 duration-300 font-medium text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline  mx-2 my-10">
+        <button className="px-4 py-2 duration-300 font-medium text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline  mx-2 my-10">
           Start Building Project
         </button>
       </Link>

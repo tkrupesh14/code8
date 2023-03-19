@@ -13,36 +13,8 @@ const Projectcat = () => {
 
   return (
     <div className="Projectcat bg-black text-white">
-      <div className="Projectcat-head">
-        <div className="Projectheadleft">
-          <h1>Introducing Code8 Project Hub</h1>
-          <div className="Projectheadleft-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam,
-            sint, reprehenderit ex quidem repellendus dicta voluptatum nemo at
-            ducimus exercitationem, dolor quasi libero laboriosam impedit?
-          </div>
-          <div className="Search-project rounded-full">
-            <span>
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </span>
-            <input
-              type="text"
-              className="bg-transparent "
-              placeholder="Search"
-            />
-          </div>
-          <div className="Level">Level : </div>
-        </div>
-        <div className="Project-head-face">
-          <Image
-            width="600px"
-            height="500"
-            src="/images/projects/Projectpage2.png"
-            alt="Project page 2"
-          />
-        </div>
-      </div>
-      <div className="Categories">
+      
+      <div className="Categories -mt-12">
         <h1>Explore our categories</h1>
         <div className="Category-holder">
           <Explorecategories
