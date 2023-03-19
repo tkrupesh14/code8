@@ -13,7 +13,7 @@ const Footer = () => {
                         <div>
                             <Image src={Logo} width="130px" height="75px"></Image>
                             <p class="max-w-xs mt-4 text-sm text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+                            Enabling community led peer to peer learning like never before!
                             </p>
                             <div class="flex mt-8 space-x-6 text-white">
                                 <a

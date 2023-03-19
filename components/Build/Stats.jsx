@@ -11,9 +11,7 @@ const Stats = (props) => {
       viewport={{ once: true }}
       className="z-10 mt-20 pb-20"
     >
-      <p className="text-4xl font-semibold z-20 mt-10 text-center title">
-        {Heading}
-        </p>
+      <div className="title text-5xl mb-10">Mentors From</div>
       <motion.div
         initial={{ x: -100, opacity: 0.5 }}
         whileInView={{ x: 0, opacity: 1 }}

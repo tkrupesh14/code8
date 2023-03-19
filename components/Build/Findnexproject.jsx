@@ -54,7 +54,7 @@ const Card = (props) => {
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ type: "spring", stiffness: 400, damping: 10 }}
     viewport={{ once: true }}
-    className="w-72 text-center group pt-32 w-full relative"
+    className="w-72 text-center group pt-10 w-full relative"
     id="FindNextProject"
   >
   
@@ -69,7 +69,7 @@ const Card = (props) => {
         <div className="text-4xl font-semibold  duration-500 mt-5 mb-10 text-pink-500">
         {props.title}
         </div>
-        <div className="mb-5  duration-500 text-justify">
+        <div className="mb-5  duration-500">
         {props.content}
         </div>
         <div>
@@ -101,17 +101,17 @@ const data = [
   {
       title: "Beginner",
       imgLink: biginnerImg,
-      content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, neque"
+      content: "find a beginner-level project for you. Which requires entry-level skills and a short time to complete."
   },
   {
       title: "Intermediate",
       imgLink: intermediateImg,
-      content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, neque"
+      content:"Work on mid-level skill projects with complex problem-solving to advance your skills."
   },
   {
     title: "Expert",
     imgLink: expertImg,
-      content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, neque"
+      content: "It's a whole team, multi-domain project where you solve real life problems and develop an MVP."
   },
  
 ]
@@ -121,7 +121,7 @@ const Findnexproject = (props) => {
 
   return (
     <div>
-   <p className="text-4xl font-semibold z-20 mt-10 text-center title">
+   <p className="text-4xl font-semibold z-20 mt-12 text-center title">
         {Heading}
         </p>
    <div className={styles.Whatdrivesus}>

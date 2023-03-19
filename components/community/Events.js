@@ -17,8 +17,8 @@ function Events() {
   return (
 
     <div>
-        <h1 className="title text-5xl my-10">Events</h1>
-      <motion.div ref={carosel} className={`${styles.carosel}`} whileTap={{cursor:"grabbing"}}>
+        <h1 className="title text-5xl my-10">Happenings</h1>
+      <motion.div ref={carosel} className={`${styles.carosel} bg-black  bg-opacity-60 bg-gradient-to-tl to-amber-800/10 group duration-500 card-animation hover:border-black/80 via-slate-600 from-black/10`} whileTap={{cursor:"grabbing"}}>
         <motion.div drag="x" dragConstraints={{right:0, left:-2100}}  className={`${styles.inner_carosel}`}>
             {EventImage.map(image => {
                 return (

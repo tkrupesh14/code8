@@ -13,16 +13,12 @@ export default function SAP () {
       {/* Student Ambassador Program*/}
       <div className="py-10 text-center ">
         <div className={`${styles.main_sap}`}>
-          <h1 className="text-7xl font-bold text-blue-500 drop-shadow shadow-yellow-500 max-w-5xl mx-auto leading-snug title ">Learn, build and collaborate.</h1>
+          <h1 className="text-7xl font-bold text-blue-500 drop-shadow shadow-yellow-500 max-w-5xl mx-auto leading-snug title ">Learn skills that keeps you <br/> ahead, like never before</h1>
           <div className="text-center font-medium mx-auto text-lg my-5 max-w-xl">
             <p>
-              Learn on the go with diverse community of techies and get ahead in
-              your career.
+            We partner with mentors from companies like Amazon, PayTm, Deloitte, TCE, Hitachi, Cisco to provide you with industry relevant cohort based courses.
             </p>
-            <p>
-              We have created a cultured community of techies for you to
-              leverage peer to peer learning, collaboration and help.
-            </p>
+            
           </div>
         
          

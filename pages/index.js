@@ -21,10 +21,9 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
       <HeroSection {...homeObjOne} />
-      <MobileSAP heading="Learn, Build & Collabroate" description="Learn on the go with diverse community of techies and get ahead in your career.
-We have created a cultured community of techies for you to leverage peer to peer learning, collaboration and help." button="Join Our Community"/>
+      <MobileSAP heading="Doing Projects made easy,professionally" description="Learn, Build and conquer like a pro with us. Join the community of thousands of likemind professionals now for free." button="Join Our Community"/>
       <WhyWithUs Heading = "Our Programs"/>
-      <AboutUs Heading="About Us" SideHeading="ABOUT"/>
+      <AboutUs Heading="About Us" SideHeading="ABOUT" kickLine="Enabling community led peer to peer learning like never before!"/>
       <Stats />
       <Mentorstats/>
       <Testimonial />

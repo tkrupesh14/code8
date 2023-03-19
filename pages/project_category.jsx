@@ -20,16 +20,19 @@ const Projectcat = () => {
           <Explorecategories
             topic={"Web Development"}
             image={"category3"}
+            desc={"Explore our curated web development projects to work on different web development tech stacks and hone your skills in website development."}
             options={true}
           />
           <Explorecategories
             topic={"Android Development"}
             image={"category2"}
+            desc={"Explore different App development projects and build Apps and gain hands-on expertise and skills in App development."}
             options={true}
           />
           <Explorecategories
             topic={"Blockchain"}
             image={"category1"}
+            desc={"Blockchain is the future, explore the projects and get hands-on with the blockchain technology."}
             options={true}
           />
         </div>

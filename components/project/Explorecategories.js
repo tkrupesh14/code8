@@ -20,9 +20,7 @@ const Explorecategories = (props) => {
          <div className="text-2xl font-semibold mt-5 mb-5 text-pink-500">
          {props.topic}
          </div>
-         <div className="mb-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
-            voluptate nihil dolor perferendis! Porro, ex architecto voluptatum
-            sint repellat ut! Nemo.</div>
+         <div className="mb-5"> {props.desc}</div>
             <Link href={`/projects?domain=${props.topic}`}>
           <i className="fa-solid fa-arrow-right"></i>
         </Link>

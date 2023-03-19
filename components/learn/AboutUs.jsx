@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "../styles/Build/Howitworks.module.css";
+import styles from "../../styles/Build/Howitworks.module.css";
 import gsap from "gsap";
 import Image from "next/image";
 
@@ -51,13 +51,10 @@ const AboutUs = (props) => {
       <p className="text-white/10 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
         {SideHeading}
       </p>
-      <p className="max-w-3xl mx-auto px-10 mb-5">
-      <b className="text-xl mb-2">{kickLine}</b><br />
-      </p>
+     
       <p className="max-w-3xl mx-auto px-10 mt-5 text-xl">
        
-      codeate is a community-led experiential learning platform. <br />
-       We provide experiential learning opportunities through our build & learn programs with our community to gain more industry relevant skills and exposure in order to become truly industry ready. With us students learn with industry professionals and build value added projects to hone their skills.
+      Get the company like experiential learning right from your college and Hone your skills like never before !
       </p>
 
       <div className="max-w-4xl mx-auto px-10 mt-20">

@@ -4,7 +4,14 @@ import styles from "../../styles/home/OurCommunity.module.css";
 const Ourcommunity = () => {
   return (
     <div className={`${styles.Our_community}`}>
-      <div className={`${styles.o_community}`}>Join our community for free</div>
+      
+      <p className="text-3xl font-semibold">
+    The learning you need, the skills you want, the career you deserve.
+    </p>
+      <p className="max-w-3xl text-xl mx-auto mt-5 mb-5">
+      
+      Join our community for free & Kickstart your learning today.
+      </p>
       <div className={`${styles.o_comm_sponsor_holder}`}>
         <div className={`${styles.o_s_card} ${styles.whatsapp}`}>
           <a

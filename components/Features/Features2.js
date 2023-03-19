@@ -27,13 +27,16 @@ const Card = (props) => {
          <motion.div
          whileHover={{ scale: 1.1 }}
          whileTap={{ scale: 0.9 }}
-         className="w-56 h-56 bg-clip-padding backdrop-filter px-6 py-4 backdrop-blur-xl bg-opacity-60 border border-white/10 bg-gradient-to-tl to-amber-800/10 group duration-500 rounded-3xl card-animation hover:border-black/80 via-slate-900 from-black/10"
+         className="w-56 bg-clip-padding backdrop-filter px-6 py-4 backdrop-blur-xl bg-opacity-60 border border-white/10 bg-gradient-to-tl to-amber-800/10 group duration-500 rounded-3xl card-animation hover:border-black/80 via-slate-900 from-black/10"
        >
-        <div className="relative left-12">
-       <Image src={props.imgLink} alt="ima" className='relative top-3' width={75} height={75}/>
+        <div className="ml-12">
+       <Image src={props.imgLink} alt="ima" width={100} height={100}/>
        </div>
+         <div className="text-xl font-semibold mt-5 mb-5 text-pink-500 text-center">
+           {props.title}
+         </div>
         
-         <div className="mb-5 text-l text-center">{props.content}</div>
+         <div className="mb-5 text-center">{props.content}</div>
        </motion.div>
        </div>
        </>
@@ -41,20 +44,24 @@ const Card = (props) => {
 }
 const data = [
   {
+      title: "Industry relevent curriculum",
       imgLink: Icon1,
-      content: "That keeps you ahead in career."
+      content: "That keeps you ahead in career & helps you grow 10X."
   },
   {
+    title: "Project based experiential learning",
     imgLink: Icon2,
       content:"Specially designed to provide you with relevant experience and hands-on."
   },
   {
+    title: "Community driven collaborative learning",
     imgLink: Icon3,
       content: "Take the community advantage to learn beyond classroom lectures."
   },
   {
+    title: "Skill validation and certificates",
     imgLink: Icon4,
-      content: "Get your skills validated and become certified by industry professionals."
+      content: "Get your skills validated and showcase it to the world."
   }
 ]
 

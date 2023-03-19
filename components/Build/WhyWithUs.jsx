@@ -92,11 +92,11 @@ const data = [
       content:"Discuss and Collab with likemind and experts from our community to build projects."
   },
   {
-    title: "Best in class curated projects.",
+    title: "Best in class curated projects",
       content: "Our projects and curriculum help you achieve industry standard skills and experience."
   },
   {
-    title: "Earn skill badges and certificates.",
+    title: "Earn skill badges and certificates",
       content: "Earn our badges and certificates that help you land internships,projects and jobs."
   }
 ]

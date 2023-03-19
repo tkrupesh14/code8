@@ -1,6 +1,6 @@
 .item{
    min-width: 30rem;
-    padding: 80px;
+    padding: 40px;
 }
 .item .img{
     width: 100%;
@@ -14,7 +14,7 @@
 .carosel{
     cursor: grab;
     overflow: hidden;
-    padding: 30px;
+    padding: 10px;
     height: 500px;
     background-color: #424242;
 

@@ -1,5 +1,5 @@
 import { Button } from "../components/button/Button";
-import AboutUs from "../components/AboutUs";
+import AboutUs from "../components/learn/AboutUs";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -34,7 +34,7 @@ We have created a cultured community of techies for you to leverage peer to peer
 
         <div id={`${styles.testbutton}`}></div>
       </div> */}
-      <AboutUs Heading="How it works?" SideHeading="WORKS"/>
+      <AboutUs Heading="How it works?" SideHeading="WORKS" kickLine="Get the company like experiential learning right from your college and Hone your skills like never before !"/>
 
       {/* Why Code8 */}
       <div className={`${styles.why_code8_heading}`}>
@@ -49,9 +49,12 @@ We have created a cultured community of techies for you to leverage peer to peer
         </div>
         <div className="">
         <div className={`${styles.mentor_text_info}`}>
-    
+    <p className="text-2xl font-semibold">
+    The learning you need, the skills you want, the career you deserve.
+    </p>
       <p className="max-w-3xl mx-auto mt-5">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis atque, labore optio architecto officia nemo excepturi quam voluptas ex dicta natus? Quam minima reiciendis quo autem, deserunt molestiae delectus voluptatibus.
+      
+      Join our community for free and kickstart your learning today.
       </p>
               <div className='mt-10'>
               <a href='#'>
