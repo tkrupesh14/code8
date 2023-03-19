@@ -9,6 +9,7 @@ import WorkshopsCard from '../components/community/WorkshopsCard'
 import Mentors from '../components/community/mentors'
 import CommunityPartners from '../components/CommunityPartners'
 import Events from '../components/community/Events'
+import Partners from '../components/community/Partners'
 // import styles from '../styles/home/OurCommunity.module.css'
 // import BuiltTop from '../components/community/BuiltTop'
 // import EventsDiv from '../components/community/EventsDiv'
@@ -32,7 +33,8 @@ We have created a cultured community of techies for you to leverage peer to peer
       {/* <EventsDiv/> */}
 
       <Mentorstats />
-      <CommunityPartners />
+      <Partners />
+      {/* <CommunityPartners /> */}
       <Events/>
       <Ourcommunity/>
     </div>

@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Build/Stats.module.css";
-import Mentorle from '../assets/images/community-partners/mentorle.jpeg'
-import SosTech from '../assets/images/community-partners/sos_tech.jpeg'
-import Acc from '../assets/images/community-partners/acc.jpeg'
-import Algocs from '../assets/images/community-partners/algocs.jpeg'
-import Befikra from '../assets/images/community-partners/befikra.jpeg'
-import BlockchainClub from '../assets/images/community-partners/blockchain_club.jpeg'
-import GamingGeeks from '../assets/images/community-partners/gaming_geeks.jpeg'
-import MLE from '../assets/images/community-partners/MLE.jpeg'
-import SheBuilds from '../assets/images/community-partners/she_builds.jpeg'
-import Web3P from '../assets/images/community-partners/web3p.jpeg'
-import Codedu from '../assets/images/community-partners/codedu.jpeg'
-import Chatrashala from '../assets/images/community-partners/chatrashala.jpeg'
+import Mentorle from '../assets/images/community-partners/1.jpeg'
+import SosTech from '../assets/images/community-partners/2.jpeg'
+import Acc from '../assets/images/community-partners/3.jpeg'
+import Algocs from '../assets/images/community-partners/4.jpeg'
+import Befikra from '../assets/images/community-partners/5.jpeg'
+import BlockchainClub from '../assets/images/community-partners/6.jpeg'
+import GamingGeeks from '../assets/images/community-partners/7.jpeg'
+import MLE from '../assets/images/community-partners/8.jpeg'
+import SheBuilds from '../assets/images/community-partners/9.jpeg'
+import Web3P from '../assets/images/community-partners/10.jpeg'
+import Codedu from '../assets/images/community-partners/11.jpeg'
+import Chatrashala from '../assets/images/community-partners/12.jpeg'
 
 
 const Stats = () => {

@@ -10,6 +10,7 @@
 }
 .inner_carosel{
     display: flex;
+    animation: scroll 60s linear infinite;
 }
 .carosel{
     cursor: grab;
@@ -18,4 +19,12 @@
     height: 500px;
     background-color: #424242;
 
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 12));
+    }
 }

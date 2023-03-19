@@ -27,6 +27,34 @@ function Events() {
                     </motion.div>
                 );
             })}
+            {EventImage.map(image => {
+                return (
+                    <motion.div className={`${styles.item}`} key={image}>
+                        <Image src={image} className={`${styles.img}`}/>
+                    </motion.div>
+                );
+            })}
+            {EventImage.map(image => {
+                return (
+                    <motion.div className={`${styles.item}`} key={image}>
+                        <Image src={image} className={`${styles.img}`}/>
+                    </motion.div>
+                );
+            })}
+            {EventImage.map(image => {
+                return (
+                    <motion.div className={`${styles.item}`} key={image}>
+                        <Image src={image} className={`${styles.img}`}/>
+                    </motion.div>
+                );
+            })}
+            {EventImage.map(image => {
+                return (
+                    <motion.div className={`${styles.item}`} key={image}>
+                        <Image src={image} className={`${styles.img}`}/>
+                    </motion.div>
+                );
+            })}
         </motion.div>
       </motion.div>
     </div>

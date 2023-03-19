@@ -192,7 +192,7 @@ export const Navbar = () => {
 
         <Link href="/">
           <div className={``} onClick={closeMobileMenu1}>
-            <Image src={logoWhite} width="130px" height="65px"/>
+            <Image src={logoWhite} width="140px" height="65px"/>
           </div>
         </Link>
 
@@ -216,7 +216,7 @@ export const Navbar = () => {
             onClick={extendElement1}
           >
             <Link href="/build">
-              <div className={`${styles.nav_links}`} onClick={closeMobileMenu1}>
+              <div className={`${styles.nav_links} mt-2 font-semibold`} onClick={closeMobileMenu1}>
                 Build
               </div>
             </Link>
@@ -228,7 +228,7 @@ export const Navbar = () => {
             onClick={closeMobileMenu1}
           >
             <Link href="/learn">
-              <div className={`${styles.nav_links}`}>Learn</div>
+              <div className={`${styles.nav_links} mt-2 font-semibold`}>Learn</div>
             </Link>
           </motion.li>
 
@@ -238,7 +238,7 @@ export const Navbar = () => {
             onClick={closeMobileMenu1}
           >
             <Link href="/community">
-              <div className={`${styles.nav_links}`}>Community</div>
+              <div className={`${styles.nav_links} mt-2 font-semibold`}>Community</div>
             </Link>
           </motion.li>
 
