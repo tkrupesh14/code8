@@ -10,10 +10,10 @@ export default function MobileSAP (props) {
   return (
     <div className={`${styles.mobile_sap}`}>
       <div>
-        <h1 className={`${styles.community_h1}`}>{heading}</h1>
+        <h1 className={`${styles.community_h1} px-5 pt-2`}>{heading}</h1>
         <div className={`${styles.community_aboutpg}`}>
           <div className="pb-10"></div>
-          <p>
+          <p className='pb-10'>
             {description}
           </p>
         </div>
