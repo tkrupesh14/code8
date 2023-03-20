@@ -128,7 +128,7 @@ const Findnexproject = (props) => {
          <div className={styles.w__card__holder}>
          <div className="">
       <svg
-        className="absolute right-0 -z-0 -mt-56"
+        className="absolute right-0 -z-0 mt-32"
         width="518"
         height="609"
         viewBox="0 0 518 1109"

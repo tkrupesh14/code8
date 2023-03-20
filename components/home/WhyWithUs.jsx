@@ -56,7 +56,7 @@ const WhyWithUs = (props) => {
   return (
   
     <div className="2xl:mx-72 my-20">
-      <p className="text-5xl font-semibold z-20 mt-10 text-center title">
+      <p className="text-5xl  font-semibold z-20 mt-10 text-center">
       {Heading}
       </p>
       <div>

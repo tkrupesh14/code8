@@ -50,14 +50,14 @@ const Howitworks = () => {
       <p className="text-white/10 font-bold text-[9rem] drop-shadow-lg absolute top-40 cursor-default select-none left-0 -rotate-90">
         WORKS
       </p>
-      <p className="max-w-3xl  mx-auto mt-5">
+      <p className="max-w-3xl px-10 mx-auto mt-5">
         We have curated the best possible ecosystem to build projects and get
         upskill on the go. Our community is a blend of industry experts and
         students along with our curriculum helps you achieve your upskilling
         goals in no time.
       </p>
 
-      <div className="max-w-4xl mx-auto mt-20">
+      <div className="max-w-4xl mx-auto px-10 mt-20">
         <ol class="relative border-l border-white/30 drop-shadow-xl shadow-orange-300 space-y-16">
           <li class="mb-10 ml-6 group ">
             <span class="absolute flex items-center justify-center w-10 duration-300 group-hover:scale-150 aspect-square group-hover:shadow-xl group-hover:shadow-purple-200 bg-blue-200 rounded-full -left-5 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800">

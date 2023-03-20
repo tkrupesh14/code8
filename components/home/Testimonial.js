@@ -88,11 +88,11 @@ const Testimonial = () => {
   return (
     <div className={`${styles.Testimonial}`}>
       <div className={`${styles.Testimonial_head}`}>
-        <h1 className="title text-5xl my-10">Testimonials</h1>
+        <h1 className="title text-5xl my-10 ">Testimonials</h1>
       </div>
       <h2>Some amazing experiences from techies around.</h2>
       <svg
-        className="absolute right-0 -z-0 -mt-32"
+        className="absolute right-0 -z-0 -mt-4"
         width="518"
         height="609"
         viewBox="0 0 518 1109"
