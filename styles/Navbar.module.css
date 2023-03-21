@@ -32,12 +32,11 @@
   flex-direction: row;
   justify-content: space-around;
   width: fit-content;
-  width: fit-content;
   align-items: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* margin: 0 30px;
-    padding: 0 40px; */
+  /* margin: 0 30px; */
+    /* padding: 0 10px; */
 }
 
 .navbar_s_logo {
@@ -165,7 +164,7 @@
   .nav_menu {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
     height: 100%;
     position: absolute;
     top: 0px;
@@ -214,7 +213,8 @@
 
   .login_sign {
     position: absolute;
-    right: 5%;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
   .fa_times {

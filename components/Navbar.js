@@ -248,11 +248,12 @@ export const Navbar = () => {
             onClick={closeMobileMenu1}
           >
             <div className={`${styles.login_sign}`}>
-              <div className="btn-mobile">
+              <div className="btn-mobile ">
                 {!user?.user && button1 && (
                   <Button
                     buttonStyle="btn--primary btn--mobile"
-                    buttonSize="btn--medium"
+                    buttonSize="btn--small"
+                    className="mr-2"
                     onClick={handleClickOpen}
                   >
                     Login
@@ -263,7 +264,7 @@ export const Navbar = () => {
                 {!user?.user && button1 && (
                   <Button
                     buttonStyle="btn--primary btn--mobile"
-                    buttonSize="btn--medium"
+                    buttonSize="btn--small"
                     onClick={handleClickOpen2}
                   >
                     Sign Up
@@ -283,7 +284,7 @@ export const Navbar = () => {
                 </motion.li>
               </Link>
               <Link href="/profile" className="rounded-full">
-                <div className="cursor-pointer font-semibold aspect-square w-12 grid place-content-center ">
+                <div className="cursor-pointer font-semibold aspect-square w-12 grid place-content-center mb-4 ">
                   {/* {user?.user?.name[0].toUpperCase()} */}
                   <img
                     src="https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg="
