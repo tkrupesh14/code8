@@ -4,13 +4,14 @@ import styles from '../../styles/home/Community.module.css'
 import Image from 'next/image'
 import learn from '../../assets/images/Learn.jpeg'
 import { motion } from "framer-motion";
+import Link from 'next/link'
 
 export default function MobileSAP (props) {
   const {heading, description, button} = props
   return (
     <div className={`${styles.mobile_sap}`}>
       <div>
-        <h1 className={`${styles.community_h1} px-5 pt-2 `}>{heading}</h1>
+        <h1 className={`${styles.community_h1}`}>{heading}</h1>
         <div className={`${styles.community_aboutpg}`}>
           <div className="pb-10"></div>
           <p className='pb-10'>
@@ -20,7 +21,8 @@ export default function MobileSAP (props) {
         {/* <Button buttonSize="btn--large" buttonColor="blue">
             Join now for free.
           </Button> */}
-        <a className='mx-10' href='#'>
+           <Link href="/community" passHref>
+        <a className='mx-10'>
                     <motion.div
                       className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-black group"
                       style={{
@@ -71,6 +73,7 @@ export default function MobileSAP (props) {
                       </span>
                     </motion.div>
                   </a>
+                  </Link>
       </div>
 
    

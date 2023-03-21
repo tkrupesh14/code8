@@ -6,7 +6,7 @@ import styles from '../../styles/WorkshopsCard.module.css'
 import biginnerImg from '../../assets/images/Saly-10.png'
 import intermediateImg from '../../assets/images/Saly-16.png'
 import expertImg from '../../assets/images/Saly-31.png'
-
+import Link from 'next/link'
 const Card = (props) => {
   return(
   <div>
@@ -16,36 +16,39 @@ const Card = (props) => {
        
          <motion.div
          whileHover={{ scale: 1.1 }}
-         whileTap={{ scale: 0.9 }}
+         
          className="w-72 bg-clip-padding  backdrop-filter px-6 py-4 backdrop-blur-xl bg-opacity-60 border border-white/10 bg-gradient-to-tl to-amber-800/10 group duration-500 rounded-3xl card-animation hover:border-black/80 via-slate-900 from-black/10"
        >
         <div className="ml-16">
        <Image src={props.imgLink} alt="ima" width={100} height={100}/>
        </div>
-         <div className="text-2xl font-semibold mt-5 mb-10 text-pink-500 text-center">
+         <div className="text-2xl font-semibold mt-5 mb-10 text-pink-500 text-center capitalize">
            {props.title}
          </div>
         
          <div className="mb-5 text-center">{props.content}</div>
+         <Link href={`./${props.title}`} className="cursor-pointer cat-option">
+          <p className="cursor-pointer bg-blue-500 rounded-full text-center capitalize p-2">Expolore {props.title}</p>
+          </Link>
        </motion.div>
        </div>
   )
 }
 const data = [
   {
-      title: "Build",
+      title: "build",
       imgLink: biginnerImg,
 
       content: "Our build program offers project-based learning opportunities in most industry-relevant tech stacks. It helps you hone your skills and let you validate your skills with our certification."
   },
   {
-      title: "Learn",
+      title: "learn",
       imgLink: intermediateImg,
 
       content:"We offer a wide range of cohort-based learning courses, which helps you gain extra edge on your learning with project-based experiential learning advantage."
   },
   {
-    title: "Community",
+    title: "community",
     imgLink: expertImg,
 
       content: "Join our peer-to-peer learning ecosystem to learn among peers, share skills, and collaborate on projects. Our events and workshops keep you up-to-date with the latest learning trends."

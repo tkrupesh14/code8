@@ -5,10 +5,10 @@ const Ourcommunity = () => {
   return (
     <div className={`${styles.Our_community}`}>
       
-      <p className="text-3xl font-semibold px-5">
+      <p className="text-3xl font-semibold px-5 text-center">
     The learning you need, the skills you want, the career you deserve.
     </p>
-      <p className="max-w-3xl text-xl mx-auto mt-5 mb-5 px-5">
+      <p className="max-w-3xl text-xl mx-auto mt-5 mb-5 px-5 text-center">
       
       Join our community for free & Kickstart your learning today.
       </p>

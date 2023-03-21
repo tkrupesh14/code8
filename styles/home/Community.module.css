@@ -32,11 +32,12 @@
 .community_h1 {
     display: flex;
     align-items: center;
-    padding-left: 5.5rem;
     font-size: 4rem;
     font-family: 'poppins';
     font-weight: 700;
-    
+    padding-top: 10px;
+    position: relative;
+    right: 12px;
 }
 
 .community_aboutpg {

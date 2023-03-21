@@ -25,8 +25,8 @@ export default function SAP () {
             </p>
           </div>
         
-         
-                  <a className='mt-10' href='#'>
+          <Link href="/community" passHref>
+                  <a className='mt-10'>
                     <motion.div
                       className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-black group"
                       style={{
@@ -77,7 +77,7 @@ export default function SAP () {
                       </span>
                     </motion.div>
                   </a>
-               
+               </Link>
           
         </div>
 

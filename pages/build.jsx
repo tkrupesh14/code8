@@ -15,7 +15,7 @@ const build = () => {
 
       <Whatisbuild />
       <MobileSAP heading=" Master your skill,one project at a time !" description="We have created a wide range of build programs where you can hone
-            your skill while working on projects." button="JStart Building Project"/>
+            your skill while working on projects." button="Start Building Project"/>
       {/* <Writtinghelloworld /> */}
       <WhyWithUs />
       <Howitworks />
