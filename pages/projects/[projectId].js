@@ -105,7 +105,7 @@ const projectdesc = () => {
   //   window.open(url, "_blank");
   // }
 
-  if (!user) return null;
+  // if (!user) return null;
   return (
     <div className="bg-black text-white">
     <div>

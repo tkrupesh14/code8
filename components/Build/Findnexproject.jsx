@@ -38,12 +38,9 @@ const Card = (props) => {
   const user = useSelector(userState);
 
   const handleLearnMore = () => {
-    if (user) {
+    
       router.push("/project_category");
-    } else {
-      openMsg("Please Login to explore more...", "error");
-      //   router.push("/");
-    }
+    
   };
   return(
 
